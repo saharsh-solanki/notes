@@ -1,0 +1,19 @@
+simple code of php 
+helow php code 
+we use 
+1) echo ".....message............ ";
+2) print " .........message.......";
+
+
+
+code ::----
+<html>
+<head>  </head>
+ <body>  
+	  <h1> learning php</h1>
+		<?php
+		print " <center><h3>hellow php</h3>";
+		
+		?>//php code
+ </body>//html code
+</html>

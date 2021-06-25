@@ -1,0 +1,344 @@
+php---> In Early Php is Called As Personal Home Page . And Now It Is Known us hypertext preproccessor language .
+----------------------------------------------------------------------------------------------------------------
+Basic PHP syntext -->
+
+<?php ?>
+
+----------------------------------------------------------------------------------------------------------------
+
+Comment in PHP --->
+
+   1} Single line Comment --->
+
+         //
+
+    2} Multiline Comment ---->
+
+         /* Comment */
+
+----------------------------------------------------------------------------------------------------------------
+
+To Print --->
+
+   echo 'Hello WOlrd';
+
+   print 'Hello PHP';
+
+   to Print array -->
+
+   print_r (arrayname);
+
+----------------------------------------------------------------------------------------------------------------
+
+
+127.0.0.1 is called as loop back addrress
+
+  Note ---> HTML Can Be Used ANywhere in PHP's Code
+
+  echo '<h1> Hello </h1>';
+
+----------------------------------------------------------------------------------------------------------------
+
+
+Variable in php -->
+
+    1}  $username='hello';
+
+    No Data Type 
+
+    exp===> $variable name = value ;
+
+----------------------------------------------------------------------------------------------------------------
+
+Operter in php--->
+
+
+  1]  concatanation operation ( . )
+
+      example --> echo '<h1>Name</h1>'.$name;
+
+      ANd Remain iS Same
+
+----------------------------------------------------------------------------------------------------------------
+
+statemnet is php  -->
+    
+     1] if () { }
+
+     2] if else 
+
+     3] else if 
+
+     4] nested else if 
+
+----------------------------------------------------------------------------------------------------------------
+
+
+array in php --> 
+
+   1} they are linear datatype 
+
+     2} they are dynamic in nature
+
+  1] one dimantional array -->
+
+         creation --> $arrayname= array();
+
+         add element --> $an[0]='saharsh';
+
+                         $an[1]=5;
+
+                         print_r($arrayname);
+
+   2] two dimantional array --> 
+
+           creation --> $arrayname= array();
+
+         add element --> $an[0][0]='saharsh';
+
+                         $an[0][1]=5;
+
+                         print_r($arrayname);
+
+----------------------------------------------------------------------------------------------------------------
+
+Loops in PHP --->
+
+   1] for loop -->
+
+      syntex --> for(initialization;condition;increment/decrement){
+        statement;
+      }
+
+
+       initialization;
+    2] while(condition){
+
+        statement ;
+        increment/decrement;
+    }
+
+    3] do{
+
+          statement ;
+        increment/decrement;
+
+    }while(condition);
+
+
+
+   3] foreach()--->
+
+         foreach ($array as $v){
+                   
+                   statemnt
+
+         }
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+funtions in php  
+
+   1] predefined 
+
+      like echo and the function that are already present 
+
+   2] userdefined -->  
+
+        func. that are creared by us -->
+
+           syntrex -->
+
+              ceration ---->  function func_name(arguments){
+
+                    statemt;
+                    $h1='hello';
+                    return $h1;
+              } 
+
+              useage --> func_name(var,args);
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+  to include another file -->
+
+    <?php include('header.php'); ?>
+
+      require('fname');
+
+    include_once('file_name');
+
+
+----------------------------------------------------------------------------------------------------------------
+
+     
+
+      superglobals ---> 
+
+
+      1] -globle variable   ->  access anywhere in the code -->
+
+           $global $username='saharsh';
+
+      2] $_SERVER ---> hold info about header path and script like ipaddress etc --->
+
+          it is used to acceess the userdata 
+
+          $_SERVER['HTTP_HOST'];  {localhost return}  etc....
+
+       3]  $_REQUEST  -> to get data in both post and get request -->
+
+       4]$_GET --> to get Data in GET request
+
+       5] $_POST --> To Get Data In POST method 
+
+       6] $_FILES  to get file data like mp4 mp4 image pdf etc..
+
+       7] $_SESSION --> to Create session
+
+          if we are ussing session we must nned to starsesson
+
+             SESSION_START();
+
+             to destroy session--->
+
+             SESSION_START();
+             session_destroy();
+
+               session get 
+
+       8] $_COOKIES --> to create cookie
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+  To Redirect A User TO NAother Page 
+
+     note --> header will not if we use echo before this 
+
+      header('location:url');
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+data connectivity code -->
+
+           <?php
+
+            $host='hostbame';
+            $username='';
+            $password='';
+            $dbname='';
+            $con=mysqli_connect($host,$username,$password,$dbanme);
+            if ($con){
+               echo 'connected !';
+
+            }
+
+             else {
+
+             echo 'not connected !';
+
+             }
+
+            ?>
+-----------------------------------------------------------------------------------------------------------------
+
+
+insert query --->
+
+
+     variable declearation ;
+
+     $query="INSERT INTO `offer`(`offername`, `tittle`, `photo`, `offerdis`,`date` ,`url`) VALUES ('$offername','$tittle','$imagename','$offerdis','$date','$alisa')";
+
+     $run=mysqli_query($con,$query);
+
+     if($run == TRUE){
+
+     run success;
+     }
+
+     else{
+
+     error condition;
+     }
+
+-----------------------------------------------------------------------------------------------------------------
+  
+   delete query 
+     
+     $query="DELETE FROM `offer` WHERE `offerid`='$id'";
+     
+     $run=mysqli_query($con,$query);
+     
+     if($run==true){
+     
+        dlete success;
+     
+     }
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   Image Upload Code --->
+
+
+    $imagename=$_FILES['image']['name'];
+   
+     $tempimagename=$_FILES['image']['tmp_name'];
+    
+
+    move_uploaded_file($tempimagename, "../offerimage/$imagename");
+
+------------------------------------------------------------------------------------------------------------------
+
+  $query="SELECT * FROM `admin` WHERE `username`='$un' and `password`='$ps'";
+    $run=mysqli_query($con,$query);
+    $row=mysqli_num_rows($run);
+    if($row < 1){?>
+        <script type="text/javascript">
+            alert('inccorect Details !!');
+            window.open('login.php','_self');
+        </script>
+        <?php }
+    else{
+        $data=mysqli_fetch_assoc($run);
+        <?php echo $data['tittle']; ?>
+         session_start();
+         $_SESSION['un']=$un;
+        header('location:dashbord.php');
+    }
+
+------------------------------------------------------------------------------------------------------------------
+ 
+ $query1="UPDATE `offer` SET `offername`='$offername',`tittle`='$tittle',`offerdis`='$offerdis',`url`='$alisa' WHERE `offerid`='$id'";
+     $run1=mysqli_query($con,$query1);
+     if($run1==true){
+     	 
+     	 Update Success
+     }
+     else{
+
+          Update Failed
+
+         }
+
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+
+

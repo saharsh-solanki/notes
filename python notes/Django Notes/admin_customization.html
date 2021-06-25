@@ -1,0 +1,193 @@
+Django Admin Customization ---> (For Example We Have user_data -> name , number ,email ,password)
+
+  --> Go To Admin.py File 
+
+   -> Create A Class
+
+            class display_user(admin.ModelAdmin):
+
+            list_display = ('name','email','phone','gender','age')
+
+            This We Show All This Field 
+
+
+            --> As We Know When We Login To admin Section Then When We Click On user_data So Only def __str__(self):
+            return name 
+
+            --> Only Name Will SHow But By List Display All Field Of Name We Have Specify Are Going To SHow
+
+
+    ---> This Will Only Work ,, We Have To Pass the Class Name To That admin.site.register(user_data,display_user):  
+
+
+------------------------------------------------------------------------------------------------------------------
+
+    Code Sholud Be Loook Like -->
+
+
+        class display_user(admin.ModelAdmin):
+		    list_display = ('email','name','phone','gender','age','profile_photo')
+
+		admin.site.register(user_data,display_user)
+
+
+------------------------------------------------------------------------------------------------------------------
+
+    list_editable = ('name','age')  
+
+--> This Means We Edit This Filed From Outside Without Going Inside It
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+  list_per_page = 10
+
+
+--> this Means Only Show 10 Data And After That Paggination Will Work
+
+------------------------------------------------------------------------------------------------------------------
+
+search_fields = ('email','phone')
+
+This Means A Serch Field On The Top Will Apear And Then We Can Search ANy User By Email id or Phone Number 
+
+
+------------------------------------------------------------------------------------------------------------------
+
+list_filter = ('cat')
+
+ this Is We A Category then a box on the right will apear and we filter by that cat for example web devlop is categeroy and html sis course the on the box we will click on the web devlopment then the data in that category will show like html css js course 
+
+-----------------------------------------------------------------------------------------------------------------
+
+fields = ('name','email','phone') 
+
+ Suppos  WHen we Click On EMail in user_data then all field in that model is going to appear and you want that only that field which you want show .. only name field is visible other is hidden
+
+-----------------------------------------------------------------------------------------------------------------
+
+exclude = ('password',)  
+
+   Suppose You Want All Field But Not Want Some Specific Field Then This Will Use This Wii Exclude password means all other field will show and password will not going to show 
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------
+
+class display_user(admin.ModelAdmin):
+    list_display = ('email','name','phone','gender','age','profile_photo','less_cont')
+
+    def less_cont(self,obj):
+        return obj.name[:1]
+
+
+        what this is going to do suppose you have a blog model and have blog_name blog title blog-description ect . blog is very big and if you want that only first 100 char should show then we can use this
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+    def less_name(self,obj):
+        return format_html(f'<span style="color:red;background:black;padding:10px;">{obj.name}</span>')
+
+
+        This Function Change The Color Of That Data
+
+-----------------------------------------------------------------------------------------------------------------
+
+Now Makeming A Diffrent Button When We Click On That Button New Window Open For That Data 
+
+So We Can use This Function
+
+    def edit(self,obj):
+        return format_html(f'<a href="/admin/user/user_data/{obj.id}/change/" style="color:white;background:green;padding:10px;">Edit</a>')
+
+-----------------------------------------------------------------------------------------------------------------
+
+SUppose You Have A chocice field and status are --> success pending and completed and you want that all Field come in radio not select field so 
+
+ radio_fields = ('tags',admin.VERTICAL) and if you want horizontal allso 
+
+-----------------------------------------------------------------------------------------------------------------
+
+save_on_top = True
+
+ Suppose if You Want that save delete update button will come on top so that can use 
+
+-----------------------------------------------------------------------------------------------------------------
+
+Suppose If You Have Photo Field and You Preview of that So You Can DO that
+
+    readonly_fields = ('photo_pre',)
+
+     def photo_pre(self,obj):
+        return format_html(f'<img style="height:20px;" src="/media/{obj.profile_photo}"/>')
+
+-----------------------------------------------------------------------------------------------------------------
+
+ adding blog editor
+
+  -->  pip install django-ckeditor
+
+  installed app 
+
+  'ckeditor',
+
+  class test(models.Model): 
+  content = RichTextField(config_name='awesome_ckeditor')
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+if you want you have first name and last name filed and you want show then in name field with color --> purple text then 
+
+create a function and pass to list display
+
+class display_user(admin.ModelAdmin):
+    list_display = ('name',)
+
+    def less_cont(self,obj):
+        return 
+
+------------------------------------------------------------------------------------------------------------------
+
+Now Changing Color And Other Thinhgs (refrense -->> https://pypi.org/project/django-admin-interface/)
+
+  ->> Intall The Admin app 
+
+     ----->> pip install django-admin-interface
+
+
+--------->  settings.py->installed app 
+
+                   'admin_interface',
+                   'colorfield',
+
+   -->> now run python manage.py migrate
+
+    This Will Automatically going to CHagnge Color By Default Green  
+
+      You Should Create Your On theme 
+
+       Now Goto -->> Admin then Theme Theme And You WIll Understand what To Do (Agar Nahi Samajh Aya To -> Ap rehna do apsa na ho payega	)
+
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------

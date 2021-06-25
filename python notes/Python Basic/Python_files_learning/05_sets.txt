@@ -1,0 +1,44 @@
+Sets ---> set is a collection of none  repettive elelments . If Same Value Comes It Will Ignore it.
+
+            # Simple Set 
+            a = {1,2,3,4}
+            print(type(a))
+
+            #Create A EMpty Set
+            b={}
+            print(type(b))
+            # This Will Create A Dictionary  To Cretae A SEmpty Set
+
+            # Empty Set
+            c=set()
+            print(type(c))
+
+            c.add(1)
+     c.add(4)
+     c.add((1,2,3,4))
+
+ 
+ Methods of sets -- > 
+    
+       1} print(len(c))  -> retrun The No Of Items In it 
+
+       2} c.remove(1   _. remove The Items  That Are Provided In It .
+
+       3} c.pop() --> remove a Random Value . 
+
+       4} c.clear() --> empties the set _.
+
+       5} c.union({8,11})  --> returns a new set with alll  items from  both sets
+
+       6} c.intersection({8,11}) --> return a sets which contains only 
+ 
+Properties of sets --> 
+   
+   1} unordered
+
+   2} indexed
+
+   3] Can Not Change item 
+
+   4} Set Can Nit Conatin Values
+ 

@@ -1,0 +1,63 @@
+to make gui app we use  tkinter the syntext is
+import tkinter 
+step 2 name_root = Tk()
+{Tk is used to popupn screen and it is base of the app and we can add other things to here like button etc....}
+step 3
+if we run this code then a simple window will popup
+
+
+#to set width and height of popup window the folowing syntax is used
+
+saharsh_root.geometry("width x height") size of window can be changed small or big
+
+saharsh_root.minsize(200,200) size of window can not small then minimum size 
+
+saharsh_root.maxsize(400,400)size of window can not be bigger then maximum size
+
+saharsh = Label(text="sahrsh is good per The string can print using this") this syntax is used to create the lable
+
+to print lable 
+
+saharsh.pack()
+
+saharsh_root.mainloop()
+
+if we run this code then a simple window will popup
+
+How to Display image 
+photo = PhotoImage(file="1.png")
+#photo = PhotoImage(file="photo\walletpng.png")
+#for print JPG image
+image = Image.open("soulpro2.jpg")
+photo = ImageTk.PhotoImage(image)
+
+varun_label = Label(image=photo)
+varun_label.pack()
+
+#to change title
+root.title("Home")
+
+#importtant lable options
+
+'''text : add the text
+bd :  background 
+fg :  foreground
+font : sset the font
+padx  : x padding
+pady : y padding
+relief : border styling : - SUNKEN,RAISED,GROOVE,RIDGE
+fill = x,y is used 
+anchor =se,sw ,ne,nw
+
+'''
+l1_lable = Label(text = '''sahrsh sus syf whdsjdsdhhd hd uhh dhdufhdu hdhfdf dhfdh fdfdf d hfudhfhfhdhf udhfjhfdhf\n''',bg="red",fg="yellow",font=("san-serif",25,"italic")
+               ,borderwidth=30,relief=SUNKEN)
+l1_lable.pack( side="bottom",fill=X)
+
+
+Frames 
+f1 = Frame(saharsh_root, bg="yellow", borderwidth=4)
+f1.pack(side=TOP)
+
+l1 = Label(f1, text="Project Management Course",font=("san-serif", 25 ))
+l1.pack()

@@ -1,0 +1,51 @@
+
+test project --> ex_replationship
+
+ What Is Relationship --> Fetching Data From Two Tbale  In The Behalf  Any Similar Key Is Called . 
+
+                         Supoose We Have Two Table Memmber and Company in both Tbale id should be Same or present 
+
+
+
+One TO One Relationship -->
+
+                          Menas Both Of Table Have Only One Data To Match.
+
+				Create Two Model 1,2; & Controller ;
+
+				In The First(emp) 
+
+				 Put 
+
+				 public function getComp()
+				    {
+				        return $this->hasOne('App\Models\company');
+				    }
+
+				    Has One Method Define That This Is One To One Repla.
+
+				    In The Controller -->>
+
+
+				    function index()
+				    {
+				        return emp::find(1)->getComp;
+				    }
+
+
+
+One To Many Relationship --> Can Fetch Two Data,3,4 etc Also ;
+
+					     public function getCity()
+					     {
+					         return $this->hasMany('App\Models\city');
+					     }
+
+
+					      //for one to many
+                          return emp::find(1)->getCity;
+
+
+
+
+

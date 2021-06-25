@@ -1,0 +1,35 @@
+Create A Model --> 
+
+      php artisan make:model User 
+
+Create a Model With Migrations 
+
+      php artisan make:model User 
+
+
+  Now To Change The Name of Table Like --> Model Name Is User and DB tabel name is cars 
+
+
+     protected $table = 'Tbale Name';
+
+  To Make TImestamp or Not 
+
+         protected $timestamps=true;
+
+         protected $timestamps = false;
+
+
+  Now Use A Date Formtate 
+
+          protected $dateFormate = 'h:m:s';
+
+
+  Hide a Value While Fetching 
+
+    protected $hidden = ['id','name']; etc
+
+  Visible only
+
+   protected $visible=['id','name','password'];
+   
+

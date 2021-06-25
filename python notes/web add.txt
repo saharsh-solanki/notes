@@ -1,0 +1,12 @@
+tom make the admin pannel 
+python manage.py migrate
+python manage.py createsuperuser
+setting.py --> import mimetypes
+allowed hsot ke under 
+mimetypes.add_.
+type("text.css",True) 
+to make application 
+python manage.py startapp first(name )
+settings.py --> installed app--> 'first',
+now createring db 
+modele.py --z>

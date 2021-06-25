@@ -1,0 +1,10 @@
+Step 1 : -    create database dbname(any);
+Step 2:-      use dbname(Given befor); 
+
+create table tblname(colums like userid varchar(50),..................);
+
+insert Quary 
+insert into tblname(userid,password) values(7243,harsh@123);
+
+in java :- 
+insert into tblname(userid,password) values(?,?);

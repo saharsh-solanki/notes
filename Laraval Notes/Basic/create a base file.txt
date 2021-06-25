@@ -1,0 +1,16 @@
+create a base file -->
+
+
+ Base.blade.txt  ---> Code Then BOdy Me -->
+
+                                           @yield('content')
+
+
+  home.blade.php --> 
+
+                     @extends('base')
+
+                     @section('content')
+
+                     @endsecotion
+

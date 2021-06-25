@@ -1,0 +1,45 @@
+Lets Write Our First Python Program 
+
+print('Hello Wolrd')
+
+Execute And Congrates 
+
+-----------------------------------------------------------------------------------------------------------------
+
+Modules --> A Module Is a File Which Is Wrriten By Somebody Else (Useallly) And Chich Can Be Imported in Our   
+            program .
+
+            import os
+
+
+   Thre are Two Types OF Modules -->
+   
+    1} Built In Modules  ---> Preinstalled With Python .(  )
+
+    2} Externel Modules ---> Need To Install Manually Using Pip .
+
+-----------------------------------------------------------------------------------------------------------------
+
+  # What Is Pip ?
+
+  Ans : Pip Is A Package Mananger for python you can use pip to install modules on our system . 
+
+  -------------------------------------------------------------------------------------------------------
+
+   # Comment In Python -->
+
+     1] Single Line Comments ---> #this is comment
+
+     2] Multiple Line Comment ---> ''' This Is Multiline comment 
+
+                                      Hi '''
+
+------------------------------------------------------------------------------------------------------------------
+
+Playsound Module In Python 
+
+pip install playsound 
+
+from playsound import playsound 
+
+path(D:\\path\\tofile) Remmber To Give \\ instaed Of \

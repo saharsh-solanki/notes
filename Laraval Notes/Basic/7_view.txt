@@ -1,0 +1,29 @@
+what is view -->  View is Avalable In Every MVC  ,, We Put Every HTML Part In This section
+
+  Route::get('login',function(){
+    return view('userlogin');
+   });
+
+
+   To Pass Data 
+
+   Route::get('login/{name}',function($name){
+    return view('userlogin',['user_name'=>$name]);
+});
+
+To Retrive Data on pages {{$user_name}}
+
+Using Controller To pass The Data 
+
+ create A controller then 
+
+ Import this Controller use App\Http\Controllers\Register;
+
+ Route::get('register/{name}',[Register::class,'loadView']);
+
+ class Register extends Controller
+{
+    function loadView($name){
+        return view('register',['name'=>$name]);
+    }
+}

@@ -1,0 +1,49 @@
+ What Is Laravel --> It Is A Free And Open Source Php FrameWork That Follow The MVC (Model View Controller ) Degin Pattern .
+
+                     The First Version Of Laravel Is Released On 9 June 2011 . This Is Top Rated Framework in Php .
+
+
+  WHat Is Middle Ware In Laravel -->  MiddleAre Provides A MEchanism For Filtering HTTP Request Entering Your  Application .
+
+                                     For Example. Laravel Include A Middle ware tat verifes the user of your appplication is
+
+                                     authenticTED.
+
+
+                                     1} Global Middleware 
+
+                                     2} Assigning Middleware to route 
+
+                                     3} Middleware Group 
+
+
+
+ Basic Command Of Laravel -->
+
+                          1} php artisan list --> Provide the list of all Controller
+
+
+
+  What Is Eloquent ORM In Laravel --> It Is Used For Working With Database .Each Database Has Correposnding Models.
+
+                        example--> 1} One To One Relationship .
+
+                                   2} One To Many Rel.
+
+                                   3} Many To Many.
+
+                                   There Many Relationship many to one etc.
+
+
+ What Is Routing -->  Routing In Laravel Allow You TO Route All your Application Reqest To Its Appropriate Controller Or View .
+
+
+
+ What Is A Controller -->  A Controller Provide The COnnection Between Request And Html File Ad ALso Get Dtaa Between From Modle And
+
+                           Can Pass It To  View.
+
+  
+ What Is View --> View COntains  The HTML Served By Your Application And Seperate Your COntroller And Logic Part .
+
+

@@ -1,0 +1,38 @@
+ What Is Http Client -->  With The Help Of Http Client We Can Get Data From Another Applocation . Used To  
+                          Communicate With Other Appications. 
+
+ How To Use -->. 
+
+   Import --> use Illuminate\Support\Facades\Http;
+
+    
+
+    Getting Data From Apis -->
+
+    $datas=Http::get("https://reqres.in/api/users?page=1");
+
+    Sending Data To View --> return view('welcome',['data'=>$datas['data']]);
+    
+
+    Displaying Data ---> 
+
+   <table border='1'>
+	<tr>
+	  <td>Id </td>
+	  <td>Email</td>
+	  <td>First Name</td>
+	  <td>Last Name </td>
+	  <td>Profile Photo</td>
+	</tr>
+
+	@foreach($data as $datas)
+	<tr>
+	  <td>{{$datas['id']}} </td>
+	  <td>{{$datas['email']}}</td>
+	  <td>{{$datas['first_name']}}</td>
+	  <td>{{$datas['last_name']}} </td>
+	  <td><image src="{{$datas['avatar']}}"/></td>
+	</tr>
+	@endforeach
+	</table>
+

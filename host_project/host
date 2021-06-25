@@ -1,0 +1,33 @@
+>>>>>  heroku login
+
+>>>>>  git init
+
+>>>>> git commit -m "first commit"
+
+>>>>> heroku create < any app name here >
+
+>>>>> heroku git:remote -a < app name here >
+
+>>>>> pip install gunicorn 
+
+>>>>> gunicorn <Your Project name like example_ajax path to wsgi file>.wsgi (test the app working correctly Got error)
+
+--> create file name --> Procfile --> Past this code --> web: gunicorn example_send_mail.wsgi
+
+>>>>> pip freeze > requirement.txt
+
+>>>>> git add .
+
+>>>>> git commit -m "second commit"
+
+>>>>> git push heroku master
+
+Got error so added STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+
+ Now again
+
+>>>>> git add .
+
+>>>>>  git commit -m "static file add commit"
+
+>>>>> git push heroku master

@@ -1,0 +1,219 @@
+test projects --> ex_query_builder 
+
+Get Result Form With Table Name -->
+
+Import THis 
+
+     use Illuminate\Support\Facades\DB;
+
+Use This Display Everything 
+
+                Getting All Data -->
+
+                                //Non Fluent Method
+                                1} DB::select('select * from post where id = 1');
+
+                                2} DB::select('select * from post where id = ?',[1]);
+
+                                3} DB::select(['table'=>'post','where'=>['id'=>1]]);
+
+                                4} DB::table('members')->get();
+
+                Where COndition -->
+
+                                //Fluent Method
+
+                                return DB::table('members')->where('id',2)->get();
+
+                count the Database Tabble -->>
+ 
+                               return DB::table('members')->count();
+
+                 Insert  Data -->
+
+                                return DB::table('members')->insert([
+                                      'username'=>'Chutiya_parag',
+                                      'password'=>'ha_hu_to',
+                                  ]);
+
+
+                  1}->where('firstkey','sign<>=','value') methiod 
+
+                             >where('id','>',1)
+
+                  2} -> ->orwhere('char_id','=','76678667')  
+
+                            Check If The Codition of where is false
+
+
+                  3} ->->whereBetween('age',[10,30])
+
+                             This Will Give The Data Between The Id 10 And 30
+
+
+                   4} ->whereNotNull('age')
+
+                           this will return data if it is not null
+
+
+                 5} distinct -->
+
+                            ->select('age')
+                            ->distinct()
+
+                            return The Distinct Data menas the data which is not same 
+
+
+                 6} orderBy()
+
+                         //->orderBy('age','asc')
+                        //->orderBy('age','desc')
+
+
+                  7} latest() --> Return The Latest Data 
+
+
+                  8} oldest() --> return oldest
+
+                  //Both Are Same As asc and desc 
+
+
+                  9} inRandomOrder --> Give The Data In Random Mener
+
+
+                       ->inRandomOrder()
+
+
+                  10}  find  --> used to find particular id 
+
+                             ->find(2);
+
+                   11} count  --> Used To Count The Matching Vlaue 
+
+                           ->count()
+
+
+                   12}min used To get Min Value from database 
+
+                   13} max --> used To Get max Value 
+
+                   14} avg --> TP Get Average of Tge dta 
+
+                                return DB::table('members')->avg('id');
+
+                  15} sum  -> Find Sum Of ALl Data
+
+                           return DB::table('members')->sum('id');
+
+
+                  16} toArray()
+
+                      Return The Data In Array Fromate;
+
+                      $data=game::all()->toArray();
+                      var_dump($data);
+
+
+                  17} toJson() 
+
+                      We Need use 
+
+                      $data=game::all()->toArray();
+                      $data=json_decode($data);
+                      var_dump($data);
+
+
+
+  insert A Data into database
+
+
+            $data=DB::table('games')
+                      ->insert([
+                          'name'=>'jjjdj',
+                          'char_id'=>'yeue',
+                          'age'=>33,
+                          'password'=>'jjjs'
+                      ]);
+                      return $data;
+            
+
+
+Update Data In Database --> 
+
+
+            function index()
+          {
+              return DB::table('members')->where('id',3)->update([
+                  'username'=>'Chutiya_parag_2',
+                  'password'=>'ha_hu_to_2',
+              ]);
+          }
+
+
+Delete Data From Database --> 
+
+          return DB::table('members')->where('id',1)->delete();
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+Elegoent Method --> Fast And Eassy It Simple 
+
+   Using Model --> 
+
+
+ Get All () Data -->
+
+       $data=game::all();
+
+  This Will Print The Data If Exist Else Got 404 Not FOund Error
+
+  $data=game::where('id','=','10')
+         ->firstOrFail();
+    return $data;
+
+    
+
+  //We Can Use All Things That We ARe Using WIth Query Builder
+
+
+   TO Insert A Data -->
+
+
+    1} Mehtod  1
+
+        $members = new member;
+        $members->name=$req->name;
+        $members->mobno=$req->password;
+        $members->password=$req->password;
+        $members->save();
+
+     2} Mehtod 2
+
+           $data=game::create([
+                  'name'=>'SS',
+                  'char_id'=>'djdjdk',
+                  'age'=>20,
+                  'password'=>'fdjaldk'
+            ]);
+
+     We Can Get This Error SO We need Oo Make It Fillable
+
+         {Add [name] to fillable property to allow mass assignment on [App\Models\game}
+
+
+     protected $fillable=['name','age','password','char_id'];
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+List --> List in python are container to store a set of value of any datatype .
+         for example
+          
+          freind=['saharsh','parag','anivesh','sagar',20,20,20,20]
+
+
+List Slicing --> Same A String Slicing.
+
+List Mehtods  ---> Methods of list 
+
+                  1} list.sort() Update Ther List or Array in badta crum...
+                  
+                  2} l1.revesre() Revesrsed The List but not sort it just reverse it .
+
+                  3} l1.append() add The New element to the list .At The End 
+
+                  4} l1.insert(2,44) insert 44 at the index of 2
+
+                  5} l1.pop(2) delete the element at the index of 2.
+
+                  6} l1.remove(22) --> remove 22 elelemt from the list.

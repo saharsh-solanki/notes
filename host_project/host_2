@@ -1,0 +1,60 @@
+>>>  Create a File Name ===> Procfile (without any extention)
+
+   And Past This Code -->>    
+          
+          web: gunicorn project_name.wsgi --log-file -
+
+>> create a file Called Requiremenmt.txt using this Command
+
+>>> CMD--->>  pip freeze > requirements.txt
+
+
+>>>>> Go -> github -> create repository --> copy link
+
+>>>>> git init 
+
+>>>>>> git remote origin  <url>
+
+>>>>> git status 
+
+>>>> git add .(git add file name)
+
+>>>> use git status to check which file is add and which is not added
+
+>>> git commit -m "initial commit"
+
+>>>> git status 
+
+////Do not push to master branch create new branch 
+
+
+>>>> git checkout -b <branch name > dev
+
+>>>> git push origin <branch name> dev
+
+if you are pushing to dev and got a error called  premisson denined just 
+
+Copy urls of repositoirey (git remote set-urls origin https://paytmbadshah@github.com/paytmbadshah/invest_app.git)
+
+isme github ke pehla username dalna h or @ lagana h bus or kuch nahi
+
+git remote set-urls origin https://paytmbadshah@github.com/paytmbadshah/jobs.git
+ 
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+…or create a new repository on the command line
+echo "# resp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/paytmbadshah/resp.git
+git push -u origin main
+                
+…or push an existing repository from the command line
+git remote add origin https://github.com/paytmbadshah/resp.git
+git branch -M main
+git push -u origin main

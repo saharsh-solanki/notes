@@ -1,0 +1,35 @@
+
+https://laravel.com/docs/8.x/releases
+ 
+  New Feture Of Laravel ---> 
+
+    * Jestream ->
+
+                  Jetstream provides the perfect starting point for your next project and includes login, registration, email verification, two-factor authentication, session management, API support via Laravel Sanctum, and optional team management. Laravel Jetstream replaces and improves upon the legacy authentication UI scaffolding available for previous versions of Laravel.
+
+
+    * Model Factory Classes ->
+
+    * Migration Squasing 
+
+    * Job Pacthing 
+
+    * Imporved Rate Limiting --> Suppose Someone Is Sending Request COntinualy Then We Can Limite It Like 1000 Request Per Minute 
+                                  hourse ect
+
+    * Imporved Maintainance Mode  --> Suppose You Site Is In Maintainance And If Your Most Importent User Want To Access It 
+                                      They Proved A Secret Key SO That A User Can Aceess It.
+
+    * Closure Dispatch / Chain 
+
+    * Dynamic Blade Componant 
+
+    * Tailwind Paggination View 
+
+    * Time Testing helper
+
+    * Improvement to Artisan Serve --> In Previous Version If Change Something In Our .env File Then We Need To Restart Our Server 
+
+    * Event Listener Improvements 
+
+    * Bug Fixes

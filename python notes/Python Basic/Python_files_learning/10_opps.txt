@@ -1,0 +1,7 @@
+Object Orianted Programing --->
+         1} Class -> IS a blue print of objects .
+
+         2} Objects --> an object is an instance of class when class is defined , (a template is definded) Memoery is allocated only after object installation.
+
+                     object of a given class can invoke the method available to it without revealing the imolemetation details to the user.
+                     

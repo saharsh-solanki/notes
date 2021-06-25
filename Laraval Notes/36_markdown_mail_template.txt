@@ -1,0 +1,18 @@
+Test Project --> ex_markdown_mt
+
+
+What Is This --> This Going To Provide You A default template That is used For Sending Mail Fully Customizable.
+
+    php artisan make:mail SampleMail --markdown=emails.SampleMail
+
+    use App\Mail\SampleMail;
+
+    Route::get('/', function () {
+	   return new SampleMail;
+	});
+ 
+
+ Now Visit https://laravel.com/docs/7.x/releases
+
+
+ We Can Do Many Things By This 

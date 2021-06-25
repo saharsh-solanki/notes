@@ -1,0 +1,232 @@
+  # What Is Programing ?
+
+  Ans :  Just Like we Used Hindi Eng Etc Language To Communicate With Each Other Thatswhy  We Use Programing  
+         Language Like Python To Communicate With Computer .
+                                              Programing Is A Way To Instruct The Computer To Perform Various 
+          Tasks.
+
+---------------------------------------------------------------------------------------------------------------  
+
+  # What Is Python  ?
+
+  ans :  Python Is Simple And Eassy To Understand Language Which Feels Like Reading Simple English This Type Of Pseudo COde Nature Make It Simople And Eassy To Learn For Begginers .
+
+     Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+		 Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a  scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+
+		 Current Version Of Python 3.9.1
+----------------------------------------------------------------------------------------------------------------
+
+ Features of python :- 
+
+   1} Eassy To Understand 
+
+   2} Eassy To Learn 
+
+   3} Free And Open Soucre 
+
+   4} Portable --> Work Of Window , linux , mac 
+
+
+   end Code With Herry .
+
+------------------------------------------------------------------------------------------------------------------
+
+  # Use Of Python 
+
+        1} Web Devlopemenet  ---> ( Framework --> Django , Flask ,  Pyramid )
+
+        2} Game Devlopement --> (liberary --> Pysoy , PyGame )
+
+        3} Mechine Learning And A.I.  --> (libraries -- > Pandas , Numpy , scikit-learn)
+
+        4} Data Visilization and Data Science ---> Data Is Money If You Know How To Extract Relevatnt Data .
+
+                                Some Libraries are -> seaborn , matplotlib
+
+        5} Dekstop GUI -->  ( liberaries Tkinter ,  tollkits --> WxWigides , kivy , PYQT ( use for make         
+
+                         application on several platfor ) )
+
+        6} Web Scraping ---> Python is a savior when it comes to pull a large amount of data from websites which
+
+                            can then be helpful in various real-world processes such as price comparison, job 
+
+                            listings, research and development and much more. 
+
+        7} Business Applications
+
+        8} Audio and Video Applications
+
+        9} CAD Applications
+
+        10} Embedded Applications
+
+-----------------------------------------------------------------------------------------------------------
+
+   # Variables --> Variables Are Container For Statoring Data Values ..
+
+               * Python Has No Command To Declearing Varibales ..
+
+               * Variable Is Created When You Assign The Value To It.
+
+               Syntext -->  x=5
+
+                            y="Hasrh"
+
+                            print(x,y)
+
+
+   # Rule For Python Varible -->>
+
+            A variable name must start with a letter or the underscore character
+			
+			A variable name cannot start with a number
+			
+			A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+			
+			Variable names are case-sensitive (age, Age and AGE are three different variables)
+
+             
+             Legle Varible --> myVar = "John"
+                              
+                              MYVAR = "John"
+
+              illigle Variable -->>  2myvar = "John"
+                                    
+                                      my-var = "John"
+                                    
+                                      my var = "John"
+             
+
+    # Casting --> Is Used To Specify data Type of  A Variable  for Example --> We Have  x=5
+
+           x = 5 
+
+           y = str(x) so This Will Be Recognised As String 5
+
+           z = float(x) so This Will Be Recognised As String 5.0
+
+
+    # type(variable) --> Is Used To Get Data Type OF ANy Variable
+
+              x=5 
+
+              print(type(x))  
+
+              It Return int
+
+
+   # String Varible Can Be Exither Defin By Single Qouts Or Double Quotes 
+
+       x= 'Saharsh'
+
+       y = "Saharsh"
+
+   # Variable Name Are Case Senstive -->
+
+            a = 4
+            
+            A = "Sally"
+
+			print(a)
+
+			print(A)
+
+			It Will Return 4 sally 
+
+
+	# Multi Words Variable --.
+
+	   1} Camel Case -->>  myVariableName = "John"
+
+	   2} Pascal Case --> MyVariableName = "John"
+
+	   3} Snake Case ---> my_variable_name = "John"
+
+
+     # We Can Assign Multiple Value  like --->>\
+
+        x,y,z="Orange", "Banana" , "Red" 
+
+     # One Value to Multiple Variables -->
+
+        x = y = z = "Orange"
+
+      # Unpack a Collection --> If you have a collection of values in a list, tuple etc. Python allows you    
+
+                                extract the values into variables. This is called unpacking.
+
+                        fruits = ["apple", "banana", "cherry"]
+						x, y, z = fruits
+						print(x)
+						print(y)
+						print(z)
+
+	  # How To Concatinate two Var.
+	     
+	      x = "Python is "
+			y = "awesome"
+			z =  x + y
+			print(z)	
+
+
+	  # We Can Not Add string To Number				
+
+
+	  # Globle Variable --> If We Create A Varible Outside The Function It Can used ANywhere in Whole Program But 
+							  If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+
+                x = "awesome"
+
+				def myfunc():
+				  x = "fantastic"
+				  print("Python is " + x)
+
+				myfunc()
+
+				print("Python is " + x)
+
+     # To Cerate A Variable Globle From inside a function We Need TO USe global Keywirk
+
+          def myfunc():
+		  global x
+		  x = "fantastic"
+
+		myfunc()
+
+		print("Python is " + x)
+
+	# If We Have a Global Var x and We Want To Change The Value Of That Global Varibale By Function then Also We Can You That KeyWord To Change and Assign A New Value
+     
+
+------------------------------------------------------------------------------------------------------------------
+
+   Data Type In Python -->
+
+
+			1} Text Type:	str
+			2} Numeric Types:	int, float, complex
+			3} Sequence Types:	list, tuple, range
+			4} Mapping Type:	dict
+			5} Set Types:	set, frozenset
+			6} Boolean Type:	bool
+			7} Binary Types:	bytes, bytearray, memoryview
+
+    For Example -->\
+     Example                                                 DataType
+
+	x = "Hello World"	                                     str	
+	x = 20	                                                 int	
+	x = 20.5	                                            float	
+	x = 1j	                                                complex	
+	x = ["apple", "banana", "cherry"]	                    list	
+	x = ("apple", "banana", "cherry")	                    tuple	
+	x = range(6)	                                        range	
+	x = {"name" : "John", "age" : 36}	                    dict	
+	x = {"apple", "banana", "cherry"}	                    set	
+	x = frozenset({"apple", "banana", "cherry"})	        frozenset	
+	x = True	                                            bool	
+	x = b"Hello"	                                        bytes	
+	x = bytearray(5)	                                    bytearray	
+	x = memoryview(bytes(5))	                            memoryview

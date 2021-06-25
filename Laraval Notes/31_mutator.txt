@@ -1,0 +1,18 @@
+test Project --> ex_mutator 
+
+What Is Mutator -->  Sometime You Need To Update Data Before Inserting In Database .Suppose Ypu Have Name And You Just Want To Add 
+                     Like mr sourabh mr word before inserting in datanbase so you can do  that .
+
+
+create Modle, controllr,
+
+In Model we Are Going TO USe .
+
+ public function setNameAttribute($val)
+    {
+        $this->attributes['name']="Mr. ".$val;
+    }
+    public function setEmailAttribute($val)
+    {
+        $this->attributes['email']=$val."@gmail.com";
+    }

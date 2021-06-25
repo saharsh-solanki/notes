@@ -1,0 +1,23 @@
+test project --> ex_accessor
+
+
+What Is Accessor --->Is Used To Modify The Recored Of Data Beofre Displaying It.
+
+                    Suppose You Have a Name Coloum in DB And You Want That The First Latter Of Your Name Will Be Capitalized Or All later Should Be Small . add Somehting etc . 
+
+
+Now Goto create A Model And Goto Model File Then 
+
+Create A Public Function  It Alwas have A Pattern That getNameOfColumn And Then The Functionality That We Want 
+
+
+ public function getNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+
+ public function getEmailAttribute($value)
+    {
+        return $value.'@gmail.com';
+    }

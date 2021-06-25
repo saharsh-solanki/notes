@@ -1,0 +1,26 @@
+Php code can be implemented through html 
+basic code of html is
+
+<html>
+<head> </head>
+ <body>
+  <h1> learning php</h1>
+  </body>
+</html>.............................
+
+
+PHP code is start with 
+<?php
+................
+................
+php coding
+.................
+................
+and and here
+?>
+
+
+
+comment in php is also 
+1:- single line /
+2 multiple line /*...................*\

@@ -1,0 +1,36 @@
+
+What Is Laraval -->>
+
+   Laraval Is FrameWork Of Php Just Like Django .
+
+   For Devlopeping WebApp And APIs.
+
+   Free Of Cost .
+
+   Modern Framwork And Eassy To Use.
+
+   The Most Used Framework In PHP.
+
+   MVC Based Architecture .
+
+
+------------------------------------------------------------------------------------------------------------------
+
+ Laraval History ---> 
+
+    Created By Taylor Otwell .
+
+    First Released On June 9, 2011,
+
+    Current Version Of Laraval IS 8.0.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Why To Use Laraval -->
+
+   1} Strong Command Line Support                     2} Large Community 
+
+   3} Regular Updates                                4} Fast And Simple 
+
+
+-----------------------------------------------------------------------------------------------------------------   

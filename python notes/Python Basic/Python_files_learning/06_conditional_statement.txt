@@ -1,0 +1,8 @@
+Conditinal Statements --> Make  Disison On A Basic Of A Condition .
+                          
+                          In Python If A Condition Match with Our Statement Then We Want Execute it.
+
+           1} if else && else if --->
+
+                                     if(con1):
+                                           statement

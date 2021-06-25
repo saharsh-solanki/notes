@@ -1,0 +1,7 @@
+Goto -> resourse/views/welcome.blade.php 
+
+ By Default This Will Running So We Edit This File This A index file 
+
+ To Load Our File  cretae a file inside resourse/views/ 
+
+ And Now routes/web.app and just change return view filel name any

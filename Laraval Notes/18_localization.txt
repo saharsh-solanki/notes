@@ -1,0 +1,80 @@
+What Is Localization ---> Putting Your Website in multiple language is localization.
+
+ For Example a website is for 4 diff cuntry all contry have diff. languages . like hindi , eng. , japanease, chinizwe.
+
+ So Locatalization Means If A User From Other Contry Like Japanease Open A Website So Content Should BE In That Language .
+
+
+
+ Step 1--> Goto resourse\lang\en --> Create A File Any Nanme .php(profile.php)
+
+ Step -->> Goto If You Have Three language then Create Theree Forlder and a file same name to file create in en folder 
+
+  -->  resourse\lang\ 
+
+          hindi\profile.php
+
+          eng\profile.php
+
+          korean\profile.php	
+
+
+          The Filer Name Should Be Same 
+
+
+          For Hindi --> 
+
+          <?php 
+			return [
+			    'welcome'=>'hindi me yaha past karna google karka ',
+			    'about'=>'hindi me yaha past karna google karka',
+			    'contact'=>'hindi me yaha past karna google karka',
+			    'content'=>'hindi me yaha past karna google karka'
+			]
+			?>
+
+
+			for korean ---> 
+			<?php 
+				return [
+				    'welcome'=>'lkorena me yaha past karna google karka ',
+				    'about'=>'korean me yaha past karna google karka',
+				    'contact'=>'korean me yaha past karna google karka',
+				    'content'=>'korean me yaha past karna google karka'
+				]
+				?>
+
+
+				TO Show 
+
+
+				<h1>{{__('profile.welcome') }}</h1>
+
+				<a href="">{{__('profile.about') }}</a><br><a href="">{{__('profile.contact') }}</a>
+
+
+				{{__('profile.content') }}
+
+
+             Now we have To Method TO Laod Website In Hindi Eng Or Etc. 
+
+             1} we Can Set A Default Lang 
+
+             2} We Can Make Dynamic Loading of A Website .
+
+
+             1} Goto config\app
+
+             Local=> folder name ;
+
+
+             2} To Do We Have TO Make A New Route
+
+			             
+			Route::get('/{lang}', function ($lang) {
+
+			    App::setlocale($lang);
+			    return view('welcome');
+			});
+
+

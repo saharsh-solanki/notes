@@ -1,0 +1,87 @@
+1} Download Heroku CLI 
+
+2} Create A Laravel Prooject 
+
+3} Create A Procfile --> Past This Code
+
+                       web: vendor/bin/heroku-php-apache2 public/
+
+ 4} Initialize Git Repository --> 
+
+                     a} git init 
+
+                     b} heroku login 
+
+                        Got Error Ip Mismatch So Used heroku login -i
+
+                     c} heroku create book-sera book-sera.herokuapp.com/ https://git.heroku.com/book-sera.git  
+
+                     d} git add .
+
+                     e} git commit –m “first commit”
+
+	                 f} git push heroku master
+
+	                 Done Successfully
+
+but You Will Get Error ( Normal ) i.e internal server error So 
+
+  Goto heroku/yourapp the settings / click on reveal config var  
+
+  Now Goto env file and add 
+
+  All One By Like 
+
+  APP_ENV=local    ===> Key And Var there 
+
+
+  * Now After Add This things website working fine but css is not loading so you need add this to web.php 
+
+  if (App::environment('production')) {
+    URL::forceScheme('https');
+}
+
+this is becase https://app.com our website is working on this 
+
+and css file are http://app.com/css are using this url inpect the page and see you will understand the issue 
+
+Now after Pasting this code agsin 
+
+git add .
+
+git commit -m "second commit"
+
+git push heroku master 
+
+
+
+*** Now adding Database 
+
+goto addones---> postgrace click on add 
+
+now use this command to see
+
+
+heroku config
+
+
+now add DATABASE_URL as key and 
+
+value find it by clicking postgrace icon
+
+postgres://yyvhjvybwjwndv:38c165834cc0e2e1a6a65ee3018bca64e6fe5d8c01ed9b658fd07050892ee783@ec2-3-233-43-103.compute-1.amazonaws.com:5432/d38mf3074tflep
+
+
+now goto config/databse.php 
+
+change DB_CONNECTION msql to pgsql 
+
+
+git add .
+git commit –m “update db connection”
+git push heroku master
+
+heroku run php artisan migrate
+
+heroku run php artisan voyager:install --with-dummy
+

@@ -1,0 +1,69 @@
+test Project -->  ex_migration
+
+ Migration Means Same Like Django --> 
+
+ Now We Want To Create A Table emp
+
+ 1} Create Directly         2} Using Migrations
+
+
+ Create a Tbale using Migration Command -->
+
+ -------------->  php artisan make:migration create_tablename_table
+
+
+ Now it Should Create Suussfully 
+
+ Now Suppose If You Want TO Add New Coloun TO This Tbale Goto 
+
+ database\migration\ last vala 
+
+ By Default id And Timestamp Will Be Automatically Created 
+
+            $table->id();//default created 
+
+            $table->string('name'); //by us
+            $table->string('mobno');
+            $table->string('password');
+
+            $table->timestamps();//default created 
+
+
+Until Now It Does Not Created In DataBase So -->
+
+
+To create it In Database
+
+    ----> php artisan migrate
+
+    it Does Not Work If Your Version Is Low So Download Latest Version Or Use Xamp Server latest Version
+
+
+Toutorial Part 2 
+
+    php artisan make:migration create_tablename_table 
+
+    php artisan migrate //To Migrate Everthing
+
+    php artisan migrate:reset //It Going To reset Everything Means Delete Database Table Created By Laravel
+
+         It Will Never Imapact Your Manually Created Tables
+
+         It You Want Just To Remove Lasted Created Data And Migrations 
+
+
+    php artisan migrate:rollback //just reset last migration
+
+    php artisan migrate:rollback --step 3 //it just removelast three migrations
+
+
+    php artisan migrate:refresh // if you have added New Filed Then You Use This Command To Do
+
+       if You Want To Migrate A Specific Table 
+
+    php artisan migrate --path=/database/migrations/2021_04_07_033007_create_test2_table.php
+
+    php artisan migrate:refresh --path=/database/migrations/2021_04_07_033007_create_test2_table.php
+
+
+

@@ -1,0 +1,20 @@
+What Is Composer --->
+
+    Composer is A Dependency Manager For PHP . For Example Composer Just Install The Required Pakeages That Is Usefully For Laraval 80% Application Uses Composer . We Have A file Composer.json In Which all Basic Required Liberires Are Already Return and If We want To Add A New Pakeages Then Add The Name Of That Pakage to That Composer With The Coressponding Version. 
+
+
+------------------------------------------------------------------------------------------------------------------
+
+  Use This Three Command To Install Composer .
+
+    1}  CMD_1 ---->  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+    2} CMD_2 ---> php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+    3} CMD_3 ---> php composer-setup.php
+
+
+Use This Commad To Unistall Composer ---> 
+
+
+   php -r "unlink('composer-setup.php');"

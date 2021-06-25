@@ -1,0 +1,33 @@
+what is middleware --> 
+                      
+                      Middleware is pease of code that provide additional feature of User Request .
+
+
+ Type Of Middleware -->
+
+                       1} Global middleware 
+
+                       2} Routed Middleware -->
+
+                                             Create a Middleware 
+
+                                             php artisan make:middleware ageCheck
+
+                                             now Register It In The middleware/kernal.php 
+
+                                             and Wrrite The Code Inside The ageCkeck.php and write teh code inside it.
+
+                                             goto web.php 
+
+                                             route::get(..........)->middleware('protectedagecheck');
+
+                       3} Group Middleware -->
+
+                                        same 
+
+                                        create a middleware 
+
+                                        php artisan make:middleware loginCheck
+
+
+

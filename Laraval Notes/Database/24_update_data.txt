@@ -1,0 +1,76 @@
+test project ---> save_data_db
+
+Url --> 
+
+//for update data touturial
+Route::get('show',[adduser::class,'show']);
+Route::get('edit/{id}',[adduser::class,'edit']);
+
+
+//for delelte data touturial
+Route::get('delete/{id}',[adduser::class,'delete']);
+
+Route::post('updatacon',[adduser::class,'updatacon']);
+
+
+First Of ALl Display All Data Then --> 
+
+function show(){
+        $data=member::all();
+        return view('listdata',['userdata'=>$data]);
+    }
+
+<a href="edit/{{$data['id'] }}">Edit</a> 
+
+When We Click It --> 
+
+ //update dtata
+
+    function edit($id)
+    {
+        $data = member::find($id);
+        return view('showupdata',['data'=>$data]);
+    }
+
+
+
+ Nwo Display A Form With Data Passed here 
+
+
+<h1>Add Members To Data BAse</h1>
+<form action="../updatacon" method="post">
+ @csrf
+ <input type="text" name="id" placeholder="" value="{{$data['id']}}"><br>
+    <input type="text" name="name" placeholder="enter name" value="{{$data['name']}}"><br>
+    <input type="text" name="mobno" placeholder="enter mobile number" value="{{$data['mobno']}}"><br>
+    <input type="text" name="password" placeholder="enter password" value="{{$data['password']}}"><br><br>
+    <input type="submit"><br><br>
+ </form>
+
+
+
+ Update COnnection --> 
+
+
+ 
+    function updatacon(Request $req)
+    {
+        $data = member::find($req->id);
+        $data->name=$req->name;
+        $data->mobno=$req->mobno;
+        $data->password=$req->password;
+        $data->save();
+        return redirect('show');
+    }
+
+
+
+ Update Data Using Model ;
+
+
+            $data=game::where('id',1)->update([
+                  'name'=>'SS',
+                  'char_id'=>'djdjdk',
+                  'age'=>20,
+                  'password'=>'fdjaldk'
+            ]);

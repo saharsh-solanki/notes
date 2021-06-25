@@ -1,0 +1,56 @@
+Test Project --> ex_jetstream
+
+JetStream --> It Is Very Usefully It Create A Basic App Automatically Like Login Singup Dahsboard etc.
+
+  Create Project --> laravel new project_name --jet
+
+  Now It Ask --> [0] livewire
+                 [1] inertia
+
+
+     0
+
+      Will your application use teams? (yes/no) [no]:
+
+      no
+
+      Now goto cd/project_name 
+
+      run --> npm install  
+
+          --> npm run dev
+
+          --> npm install laravel-mix@latest --save-dev
+
+          --> npm install && npm install laravel-mix@latest --save-dev // use this command to not get erro
+
+       Config Database
+
+
+  Install In A Created Projects
+
+  composer require laravel/jetstream
+
+   php artisan jetstream:install livewire
+
+
+   DO not Use This Immidiatly use the bellow command first
+
+            Then
+
+             npm install && npm run dev
+
+
+now It WIll use Tailwind css To Use Boostrap We Need to --> 
+
+  Run This Command
+
+  //docs -----> https://github.com/nascent-africa/jetstrap
+
+
+  isnatll jetstrap --> composer require nascent-africa/jetstrap --dev
+
+
+  Now COmple --> php artisan jetstrap:swap livewire
+
+  npm install && npm run dev

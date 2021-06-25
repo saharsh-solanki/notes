@@ -1,0 +1,19 @@
+Step 1 : - Pakages
+import javax.swing.JOptionPane;
+import java.sql.*;
+
+
+Step 2 : - connection
+Connection c=null;
+PreparedStatement pst=null;
+ResultSet rs=null;
+
+Step 3 : -
+try{
+class.forName("com.mysql.jdbc.Driver");
+c=
+DriverManager.getConnection("jdbc:mysql://localhost/dbname","root","");//url
+}//end of try
+catch(Exception e){
+JOptionPane.showMessageDialog(null, e);
+}//end of catch

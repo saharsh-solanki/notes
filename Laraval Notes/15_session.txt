@@ -1,0 +1,62 @@
+
+test project --> ex_sessio
+
+
+ Session Are Same --> 
+
+     Create A Session -->
+
+      $req->session()->put('user',$username);
+
+      User---> is The Name of Session variable ||| $username is The Valude That Need To Be Assign TO That Session .
+
+      Get Session ---> 
+
+      {{ session('username') }}
+
+      Check If Session Has username Sesion if has Then Redirecing To profile
+
+      if($req->session()->has('username')){
+            return redirect('profile');
+        }
+        else
+        {
+            return view('welcome');
+        }
+
+
+      if($req->session()->has('username')){
+            session()->pull('username',null);
+        }
+        return redirect('/');
+
+
+     Deleteing session or Put Value Null to Sesison 
+     
+     if($req->session()->has('username')){
+            session()->pull('username',null);
+        }
+        return redirect('/');   
+
+
+
+
+FLash Session Creattion -->
+
+ test project --> ex_sessio 
+
+
+ What Is Flash Session --> Flash Session Is A Sesion That We Create it Can Be Access Only One Time to Another Page . For Example   
+                          Enter Username --> Create A Flash Session Then --> Show Data Of Flash Session Then Automatically Deleted After One Time Used .
+                          
+ 
+
+ Create  A Flash Session -->   $req->session()->flash('un',$data);
+
+
+
+ Show A Flash Session --> @if(session('un'))
+              <h2>{{ session('un') }}</h2>
+              @endif
+
+  

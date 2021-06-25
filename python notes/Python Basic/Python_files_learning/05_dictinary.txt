@@ -1,0 +1,63 @@
+Dictionary --> Is A Collection Of Key Value Pair . 
+
+              student = {
+                   "key" : "value",
+                   "name":"saharsh",
+                   "email":"sola@gmail.x=com",
+                    "marks":[1,2,3,4],
+                   "another":{"fname":"arun"}
+              }
+
+
+              print(student['name'])
+              print(student['marks'])
+              print(student['another']['fname'])
+
+
+ Properties Of dictionary 
+
+   1} It Is Unordered
+
+   2} It IS Mutable gmail.x
+   
+   3} It Is Indexed
+
+   4} Can Not Contain Duplicate Keys.
+
+Method of Dictionary --- >
+         
+         Consider a Following Dictionary 
+
+         a = {
+             "name" : "Sahatrsh ",
+             "form" : "india",
+             "marks" : [1,2,3,4]
+         }
+   
+   1}  dic.key() Return The Key Of Dictinary.
+
+   2} dic.values() --> Return the Value Of Tehe Dictionary ..
+
+   3} dic.items() --> return In The forms of tuple so that we canacess
+
+   4} dic.update() update the dic by adding key values pair ..
+
+            updated={
+            "Paeag": "Freinds",
+            "What": "C****ya"
+        }
+
+        student.update(updated)
+
+   5} dic.get('name') --> return the value of that key ..
+         
+         so what is the diff.  btwen 
+
+         dic.get('name')   && dic['name']
+
+         If The Name key is present in th e==e dictionary both will return true  but if name is not present then the 
+
+         dic['name'] --> this statement will get error 
+
+         but dic.get('name') Doest not give any error it will return none . 
+

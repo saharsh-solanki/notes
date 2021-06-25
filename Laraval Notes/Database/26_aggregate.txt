@@ -1,0 +1,22 @@
+test project-->ex_query_builder
+
+To Get Average Of Any Specific Table --> 
+
+     return DB::table('members')->avg('id');
+
+To Add All Data ==> 
+
+     return DB::table('members')->sum('id');
+
+
+To Count No Column In DB --> 
+
+   return DB::table('members')->count('id');
+
+To Get Max 
+
+      return DB::table('members')->max('id');
+
+To Get MIn 
+
+      return DB::table('members')->min('id');

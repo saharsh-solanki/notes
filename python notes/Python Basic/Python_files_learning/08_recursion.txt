@@ -1,0 +1,3 @@
+Recursion --> Recursion is A fucntion whcih call itself it is used to use directly a methematcall formula as a function .
+
+             factorial(n)=n*factorial(n-1)

@@ -1,0 +1,17 @@
+Test Project --> ex_maintainance
+
+What Is Maintainance Mode --> If You Want To Do Something In Your Website . Like Update a code or etc . So We Just Put Website In 
+                             Down Mode
+
+
+                             Just Put Website In Maintaimnace Mode 
+
+                             --> php artisan down
+
+                             And To Like Again 
+
+                             --> php artisan up
+
+                             Now If A User Want To Acces Your Website In down Mode Then You Can Provide A Secret Code
+
+                             php artisan down --secret="12121212"
