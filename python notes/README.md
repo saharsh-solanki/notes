@@ -2,9 +2,9 @@
 
 ALL Notes That I Have Write In Programming Carrier
 
-## Notes On The Bassed ON Languages -
+## Notes On The Basic Of Languages -
 
-* [Python Notes](https://github.com/paytmbadshah/notes/blob/dev/python notes/README.md)
+* [Python Notes](https://github.com/paytmbadshah/notes/blob/dev/)
 * [Django Notes](https://github.com/paytmbadshah/notes/blob/dev/)
 * [PHP Notes](https://github.com/paytmbadshah/notes/blob/dev/)
 * [Laravel Notes](https://github.com/paytmbadshah/notes/blob/dev/)
