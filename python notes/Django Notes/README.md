@@ -21,7 +21,9 @@ Python ( Django Notes )
 
 and datetime().today()
 
-to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  ```
+to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  
+
+```
 
 + Create And Active Virtual Env
 
