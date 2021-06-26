@@ -88,3 +88,6 @@ etc but  i have faced the issue that i can't use this tags with if else for etc 
 		  def any_function(val):
 		  	return YourModel.objects.count()
 		  	
+			
+			
+			
