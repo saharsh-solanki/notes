@@ -17,11 +17,11 @@ Python ( Django Notes )
 
 + Date 
 
-''' To get Current time --> datetime().now()
+``` To get Current time --> datetime().now()
 
 and datetime().today()
 
-to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  '''
+to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  ```
 
 + Create And Active Virtual Env
 
@@ -31,19 +31,19 @@ to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  '''
 
    + Step--1]  Install Virtual Environment
 
-    ''' pip install virtualenv or py -m pip install --user virtualenv '''
+    ``` pip install virtualenv or py -m pip install --user virtualenv ```
 
    + Create virtualenv ---->
 
-    ''' py -m venv ________(name of virtualenv[first]) '''
+    ``` py -m venv ________(name of virtualenv[first]) ```
 
     + Goto -- virtualenv (first)
  
-     ''' cd first  '''
+     ``` cd first  ```
 
      + active the virtualenv
 
-     ''' scripts\activate '''
+     ``` scripts\activate ```
 
  + Set Image Url 
 
@@ -52,8 +52,8 @@ to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  '''
         + Goto Settings.py -->> At The End -->>> Add This Following Code -->>
 
 + media url
-'''
+```
 MEDIA_URL='/media/' 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media') # Folder Name 
 
-'''
+```
