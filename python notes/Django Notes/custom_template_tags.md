@@ -66,11 +66,11 @@ Let the Code Begin --->>
 
 use ginja code start    load custome_tag  end jinja --> Use This On The Top
 
-```
+
 And Use Where You Want To Use That Tag
 	   {% tag_name  %}
 
-```
+
 
 
      if we Create template tags then we can pass more then 1 2 3 or var and value  like  {% tag_name varl1 varl2 %} etc but  i have faced the issue that i can't use this tags with if else for etc so we need to create filter 
