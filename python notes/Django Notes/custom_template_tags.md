@@ -68,7 +68,7 @@ use ginja code start    load custome_tag  end jinja --> Use This On The Top
 
 
 And Use Where You Want To Use That Tag
-	   {% tag_name  %}
+	   jinja code start   tag_name    end 
 
 
 
