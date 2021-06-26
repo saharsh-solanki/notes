@@ -4,15 +4,15 @@ Python ( Django Notes )
 
 ## Notes On The Basic Of Languages -
 
-* [How To Customize Django Admin Panel ](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/admin_customization.md)
-* [How Deploy Django App To Heroku](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/deploy_django_to_heroku.md)
-* [How To Intigrate Paypal Payment Gatway](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/how_to_add_papapl_payment_gatway.md)
-* [How To Intigrate Paytm Payment Gatway](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/how_to_intigrate_paytm_payment_gataway.md)
-* [How To Intigrate Stripe Payment Gatway](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/stripe_payment_gatway.md)
-* [Send Mail](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/send_mail.md)
-* [Schedule Task](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/schedule_task.md)
-* [Connect To MySql DataBase](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/How_to_connect_with_mysql_database.md)
-* [Create Custome Templete Tags ](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/custom_template_tags.md)
+* [How To Customize Django Admin Panel ](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/admin_customization)
+* [How Deploy Django App To Heroku](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/deploy_django_to_heroku)
+* [How To Intigrate Paypal Payment Gatway](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/how_to_add_papapl_payment_gatway)
+* [How To Intigrate Paytm Payment Gatway](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/how_to_intigrate_paytm_payment_gataway)
+* [How To Intigrate Stripe Payment Gatway](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/stripe_payment_gatway)
+* [Send Mail](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/send_mail)
+* [Schedule Task](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/schedule_task)
+* [Connect To MySql DataBase](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/How_to_connect_with_mysql_database)
+* [Create Custome Templete Tags ](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/custom_template_tags)
 ## Some Basic Are Here 
 
 + Date 
