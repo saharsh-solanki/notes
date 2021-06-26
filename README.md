@@ -11,3 +11,5 @@ My Personal Notes ( Hosted For My Self )
 * [Java Script Notes](https://paytmbadshah.github.io/notes/Java%20Script%20Notes/)
 * [AJax Notes](https://paytmbadshah.github.io/notes/Ajax%20Notes/)
 * [Database Querys](https://paytmbadshah.github.io/notes/Database%20Querys/)
+
+
