@@ -61,10 +61,14 @@ Let the Code Begin --->>
 	 ->>   If you want to register it with a different name, you can do it by specifying a name attribute like @register.simple_tag(name='my_tag').
 
 
+```
+	 Now Go To Your html view then 
+	 {% load custom_tags %}   On the Top
 
-	 Now Go To Your html view then {% load custom_tags %}   -->
-
+And Use Where You Want To Use That Tag
 	   {% tag_name  %}
+
+```
 
 
      if we Create template tags then we can pass more then 1 2 3 or var and value  like  {% tag_name varl1 varl2 %} etc but  i have faced the issue that i can't use this tags with if else for etc so we need to create filter 
