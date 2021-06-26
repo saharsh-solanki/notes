@@ -61,10 +61,12 @@ Let the Code Begin --->>
 	 ->>   If you want to register it with a different name, you can do it by specifying a name attribute like @register.simple_tag(name='my_tag').
 
 
-```
-	 Now Go To Your html view then 
-	 {% load custom_tags %}   On the Top
 
+	 Now Go To Your html view then -->
+
+use ginja code start    load custome_tag  end jinja --> Use This On The Top
+
+```
 And Use Where You Want To Use That Tag
 	   {% tag_name  %}
 
