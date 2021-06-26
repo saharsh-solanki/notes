@@ -15,50 +15,41 @@ Python ( Django Notes )
 * [Create Custome Templete Tags ](https://github.com/paytmbadshah/notes/blob/dev/python%20notes/Django%20Notes/custom_template_tags.html)
 ## Some Basic Are Here 
 
-* Date 
-'''
-To get Current time --> datetime().now()
++ Date 
+
+''' To get Current time --> datetime().now()
 
 and datetime().today()
 
-to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")
-'''
+to fromate date -->> strftime("%Y-%m-%d %H:%M:%S")  '''
 
-* Create And Active Virtual Env
++ Create And Active Virtual Env
 
-+ Run CMD as administrater :--
+   + Run CMD as administrater :--
 
-+ Goto Python Project Folder ---
+   + Goto Python Project Folder ---
 
-+ Step--1]  Install Virtual Environment
+   + Step--1]  Install Virtual Environment
 
-'''
-pip install virtualenv or py -m pip install --user virtualenv
-'''
+    ''' pip install virtualenv or py -m pip install --user virtualenv '''
 
-+ Create virtualenv ---->
+   + Create virtualenv ---->
 
-'''
-py -m venv ________(name of virtualenv[first])
-'''
+    ''' py -m venv ________(name of virtualenv[first]) '''
 
-+ Goto -- virtualenv (first)
+    + Goto -- virtualenv (first)
  
- '''
-  cd first
-'''
+     ''' cd first  '''
 
-+ active the virtualenv
+     + active the virtualenv
 
-'''
-scripts\activate
-'''
+     ''' scripts\activate '''
 
-* Set Image Url 
+ + Set Image Url 
 
-+ Media Urls Set -->>
+          * Media Urls Set -->>
 
-+ Goto Settings.py -->> At The End -->>> Add This Following Code -->>
+        + Goto Settings.py -->> At The End -->>> Add This Following Code -->>
 
 + media url
 '''
