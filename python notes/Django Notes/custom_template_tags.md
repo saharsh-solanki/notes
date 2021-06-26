@@ -71,9 +71,15 @@ And Use Where You Want To Use That Tag
 	   jinja code start   tag_name    end 
 
 
+if we Create template tags then we can pass more then 1 2 3 or var and value  like  .
+
+jst tag_name varl1 varl2 end 
+
+etc but  i have faced the issue that i can't use this tags with if else for etc so we need to create filter 
 
 
-     if we Create template tags then we can pass more then 1 2 3 or var and value  like  {% tag_name varl1 varl2 %} etc but  i have faced the issue that i can't use this tags with if else for etc so we need to create filter 
+
+    
 
      same we can create filters
 
