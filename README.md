@@ -1,6 +1,6 @@
 # Notes Of Saharsh Solanki 
 
-ALL Notes That I Have Write In Programming Carrier
+My Personal Notes ( Hosted For My Self )
 
 ## Notes On The Bassed ON Languages -
 
