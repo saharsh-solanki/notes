@@ -1,0 +1,247 @@
+Test Projects --> 
+
+What Is API --> Stand For Application Programing Interface. Transfer Database To One Technology To Another Technology. 
+
+   * When We Are Just Fetching The Data Then We Use GET method .
+
+   * When We Are Inserting The Data Or Pushing The Data Then We Use POST method .
+
+   * When We Are updateing A Data then We USe Put METHOD . 
+
+   * When We Are Deleting a data Then we Use Delete Method . 
+
+
+
+Make First Api --> Create Controller --> 
+
+                Route\api.php
+
+                Add --> You Route For Api
+
+
+                Route::get('/data',[dummyapi::class,'getData']);
+
+                function getData()
+			    {
+			        return ['name'=>'anil'];
+			    }
+
+			    Now Just Use PostMen To See Result -->
+
+			    Url --> http://127.0.0.1:8080/api/data
+
+
+
+
+ Get Data With Api (From Database) --> 
+
+  * Connect Database 
+
+  * Create Model
+
+     * Just Return The Model Data model::all()
+
+
+
+
+  Api With POST method ------> When We Want To Send Data to Save Like In Signup .
+
+                      * Create Controller
+
+                      * Create Model 
+
+                      Route::post('/adduser',[dummyapi::class,'adduser']);
+
+                      use App\Models\userdata;
+
+                       function adduser(Request $req)
+						    {
+						        $data=new userdata;
+						        $data->name=$req->input('name');
+						        $data->email=$req->input('email');
+						        $data->password=$req->input('password');
+						        $data->save();
+						        if($data){
+						        return ['result'=>'Data Saved'];
+						        }
+						        else{
+						         ['result'=>'error']
+						        }
+						    }
+
+
+
+
+
+PUT Method With API  --> 
+
+    * Use --> PUT Method Is Used To Update The Data . 
+
+    * Crreate COntrollwr , Model .
+
+    Doesnot Work So I Used Post Method .
+
+
+
+
+ Delete Methiod With API-->
+
+      * Used To Delete The Data .
+
+      it Also Did Not Work SO Agin Used Post Method And Just Deleted The data .
+
+
+
+
+ Search Match API -->
+
+   * Controller , model 
+
+   Get --> Method 
+
+
+    function search($name)
+    {
+        $data=userdata::where("name","like","%".$name."%")->get();
+        return $data;
+    }
+
+
+
+API Validation --> 
+
+    use Validator;
+
+     function testdata(Request $req)
+    {
+        $rule=array(
+            "name"=>"Required|min:5|max:20",
+            "email"=>"Required|min:5|max:20",
+            "password"=>"Required|min:5|max:20",
+        );
+        $validator= Validator::make($req->all(),$rule);
+        if($validator->fails())
+        {
+            return response()->json($validator->errors(),401);
+        }
+        else{
+            $data=new userdata;
+            $data->name=$req->input('name');
+            $data->email=$req->input('email');
+            $data->password=$req->input('password');
+            $data->save();
+            return ['result'=>'Data Saved'];
+        }
+        
+    }
+
+
+
+Api With Resource In Laravel --> 
+
+   Resource --> 
+
+      * Make Resourse -->
+
+      php artisan make:controller ApiController --resource 
+
+
+
+
+
+ Api Auth With Sanctum --->
+
+  Docs/ https://github.com/anil-sidhu/laravel-sanctum
+
+
+     composer require laravel/sanctum
+
+
+     php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+      
+     php artisan migrate
+
+
+     app/Http/Kernel.php
+
+     gorupmiddleware 
+
+       \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+
+      Isnide Models/User.php
+
+      use Laravel\Sanctum\HasApiTokens;
+
+		class User extends Authenticatable
+		{
+		    use HasApiTokens, Notifiable;
+		}
+
+
+		php artisan make:seeder UsersTableSeeder
+
+		use Illuminate\Support\Facades\DB;
+		use Illuminate\Support\Facades\Hash;
+		...
+		...
+		DB::table('users')->insert([
+		    'name' => 'John Doe',
+		    'email' => 'john@doe.com',
+		    'password' => Hash::make('password')
+		]);
+
+
+		php artisan db:seed --class=UsersTableSeeder
+
+		Create A Route --> 
+
+		//sanctum 
+
+		Route::post("login",[UserCon::class,'index']);
+
+
+		Create A Controller For It 
+
+		function index(Request $request)
+    {
+        $user= User::where('email', $request->email)->first();
+        // print_r($data);
+            if (!$user || !Hash::check($request->password, $user->password)) {
+                return response([
+                    'message' => ['These credentials do not match our records.']
+                ], 404);
+            }
+        
+             $token = $user->createToken('my-app-token')->plainTextToken;
+        
+            $response = [
+                'user' => $user,
+                'token' => $token
+            ];
+        
+             return response($response, 201);
+    }
+
+		Route::post("login",[UserController::class,'index']);
+
+
+
+
+
+
+UPLOAD FILES WITH API --> 
+
+   * Create A Controller 
+
+   * Create A Route For It --> 
+
+   Route::post('upload',[UpFile::class,'upload']);
+
+   Function In The Controller  -->
+
+    function upload(Request $req)
+    {
+        $res=$req->file('file')->store('ApiDoc');
+        return ['result'=>$res];
+    }

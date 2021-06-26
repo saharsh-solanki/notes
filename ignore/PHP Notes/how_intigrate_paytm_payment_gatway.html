@@ -1,0 +1,60 @@
+This Should be Changed in lib/config.php file 
+
+		Step 1 : Go to Paytm.devloper and then login and open test api section :--
+
+		step 2:  Now Past The lib Folder in the working directory then open config_paytm.php 
+
+		step 3:  Now Copy The test merhcant id and test merchant key aand past it 4 
+
+
+		step 4:    Now Copy PAYTM_MERCHANT_WEBSITE From website and past 
+
+		Step 5:   Now Copy TXN url ---> and Past 
+
+		Step 6:   Now Copy TXN  Status url ---> and Past It  
+
+		Done ;
+
+
+Now After Submit form like ( in ecomerce website pay by paytm  ) When User Click On This Button We Have To Redirect user to this file pgRedirect with order_id now ( The Best Way To Do is Insert all details like name address email txn_AMOUNT time product_id etc in database and then and make status == pending  And 
+
+   	Now     $ORDER_ID = $order_id; =============Order_id ALwas Unique
+			$CUST_ID = "CUST001";==========  // CUstomer_id
+			$INDUSTRY_TYPE_ID = "retail"; ====Reatail etc
+			$CHANNEL_ID = "WEB";         -=======
+			$TXN_AMOUNT = $amount;       
+
+			This Variable Sholud BE Pass In The PgRedirect.php 
+
+After Passing This Variable We Have One more
+
+$paramList["CALLBACK_URL"] = "http://".$hst."/charge/recharge.php";
+
+After Payment is successfull or failed paytm will redirect us to this page with parameters like order_id , txn_status etc 
+
+And if Payment is successfull we can update status = paid to this order_id or Success or if paytm txn_status is failed update status 
+to faildb to this order_id 
+
+
+
+
+
+
+Now We Have One More File Called txnstatus.php we have that file check the txn_status with order-id We Need TO Pass the order_id To This file and we can check wthere the tcn is faield success 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+test project --> ex_markdown_mt
+
+Create Custom Command 
+
+php artisan make:command showDB
+
+Now CHnage in APpp\Command\showDB.php
+
+protected $signature = 'showDB';
+
+protected $description = 'Dipslay Current Database';
+
+
+to kernal.php
+
+
+ protected $commands = [
+        //
+        commands\showDB::class,
+    ];
+
+
+    Getting Cureent DB name --> 
+
+
+     public function handle()
+    {
+        $this->info('Current DB nane :'.DB::connection()->getDatabaseName());
+    }
+
+
+

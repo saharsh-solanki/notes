@@ -1,0 +1,13 @@
+
+  1} Type Casting --> Typecasting is way to convert one datatype to another datatype .
+
+    a = "3333" This Is A String datatype but it can convert to int becase it have a int value 
+    print(type(a)) --> string
+    print(type(int(a))) -> int 
+
+    a="737hfhu" This Can Be Convert to int becase it have invalid formate .
+
+
+    b=3993
+
+    str(b) -> string 

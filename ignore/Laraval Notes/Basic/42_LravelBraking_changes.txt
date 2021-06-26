@@ -1,0 +1,14 @@
+
+
+Route::get("/","User@index"); 
+
+   * Before 8 . User Is Controller And index is Function
+
+   Use App\Http\Controller\User;
+
+   * But Route::get("/",[User::class,'index']); 
+n
+
+
+   Why They Do That --> In 7 We Can Create Controller Only In App\Htt ....  But Now We Can Creaye Controller AnyWhere In Project 
+                       So That is The Benifit.

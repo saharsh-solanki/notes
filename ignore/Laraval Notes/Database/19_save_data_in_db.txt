@@ -1,0 +1,22 @@
+test_project --->  save_data_db
+
+Connect To Database First 
+
+Then Create A Model
+
+Now Goto That Save_data Or Etc Function First Import The Model
+
+Import The Model 
+
+        $members = new member;
+        $members->name=$req->name;
+        $members->mobno=$req->password;
+        $members->password=$req->password;
+        $members->save();
+
+
+use App\Models\member;
+
+
+Now We Will GOing TO get A Error that is update_at and create_at named Column Not Found Becase By Default Laravel Used it SO We Need Do Some COnfiguration.
+

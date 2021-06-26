@@ -1,0 +1,88 @@
+test Project --> Paggination
+
+$data=Member::paginate(2);
+
+To make Pagination below the any page 
+
+<div>
+   {{$memberdata->links()}}
+
+</div>
+
+This WIll Return The Next Previous Method On The Paggination 
+
+Now Methods  Of Pagginations -->  Paginator Instance Methods
+
+  Example {{ $data->$paginator->currentPage() }}     --------Output => 1 etc ---------
+
+
+     1} $paginator->count()            ----->  Get the number of items for the current page.
+
+     2} $paginator->currentPage()     ------>  Get the current page number.
+
+     3} $paginator->firstItem()        ----->  Get the result number of the first item in the results.
+
+     4} $paginator->getOptions()      ------> 	Get the paginator options.
+
+     5} $paginator->getUrlRange($start, $end)-->  Create a range of pagination URLs.
+
+     6} $paginator->hasPages()        ------->  Determine if there are enough items to split into multiple pages.
+
+     7} $paginator->hasMorePages()    ------->	Determine if there are more items in the data store.
+
+     8} $paginator->items()           -------->	Get the items for the current page.
+
+     9} $paginator->lastItem()	      --------> Get the result number of the last item in the results.
+    
+    10} $paginator->lastPage()	     ---------> Get the page number of the last available page. (Not available     
+                                                when using simplePaginate).
+    
+    11} $paginator->nextPageUrl()	----------> Get the URL for the next page.
+    
+    12} $paginator->onFirstPage()	----------> Determine if the paginator is on the first page.
+    
+    13} $paginator->perPage()	    ----------> The number of items to be shown per page.
+
+    14} $paginator->previousPageUrl()	-------> Get the URL for the previous page.
+    
+    15} $paginator->total()	           --------> Determine the total number of matching items in the data store. ( 
+                                                 Not available when using simplePaginate).
+    16} $paginator->url($page)	      ---------> Get the URL for a given page number.
+
+    17} $paginator->getPageName()	-----------> Get the query string variable used to store the page.
+ 
+    18} $paginator->setPageName($name)	--------> Set the query string variable used to store the page.
+
+
+
+
+
+
+
+
+
+    Simple Paggination In View ---> 
+
+                                <div class="nav-links">
+
+                                    <a class="prev page-numbers" href="{{ $books->PreviousPageUrl() }}"><i class="fa fa-long-arrow-left"></i> Previous</a>
+                                    
+                                    @for ($i=1;$i<= $books->LastPage();$i++)
+                                        @if ($i==$books->currentPage())
+                                             <a class="page-numbers current" href="{{ $books->url($i) }}">{{ $i }}</a>    
+                                        @else
+                                              <a class="page-numbers " href="{{ $books->url($i) }}">{{ $i }}</a>  
+                                        @endif
+                                        
+                                    @endfor
+                                      <a class="next page-numbers" href="{{ $books->NextPageUrl() }}">Next <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+
+
+
+  Can Use Where Clause in Paggination Like This --> 
+
+  if($req->input('search')){
+            $books=Book::where('book_name','like','%'.$req->input('search').'%')->paginate(3);
+            return view('files/books',['books'=>$books]);
+        }

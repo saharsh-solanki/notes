@@ -1,0 +1,9 @@
+  # Oprators -->
+
+         1} Arithmatic Operators -->+,-,*,/
+
+         2} Assignment Op -> =,+=,-=,
+
+         3} Comparison Op ->==,<,>,<=,>=
+
+         4} Logical Operator ->and or not

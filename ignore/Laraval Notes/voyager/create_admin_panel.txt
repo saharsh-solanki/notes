@@ -1,0 +1,17 @@
+test project --> ex_voyager
+
+  1} Install voyager Composer Pakage
+
+  composer require tcg/voyager
+
+  2} Install
+
+  php artisan voyager:install
+
+  php artisan voyager:install --with-dummy
+
+
+  * If You Are Creating A New Database Table Then Create with s like user so --> users , member --> member 
+
+
+  

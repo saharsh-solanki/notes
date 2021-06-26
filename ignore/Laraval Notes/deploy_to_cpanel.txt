@@ -1,0 +1,37 @@
+Deploy Laravel App To CPanel Eassily .
+
+1} Create A index.php in your laravel root directry .
+          
+          Past This Code -->
+
+
+          require __DIR__.'/../../laravel_project/vendor/autoload.php';
+
+$app = require_once __DIR__.'/../../laravel_project/bootstrap/app.php';
+
+
+//// Create Zip File And Upload It To Your Cpnal domain or sub domain and then extract it .
+
+
+2} Connect To Database -->
+
+     Create A Database and user in cpanel 
+
+     Goto .env File And Then Past DB_HOST ,  user , Password ect ..
+
+ 
+ 3} editing .env file 
+
+     Change App_url ect Variable To New One 
+
+
+ 4} Voyager Image Problem Solution . 
+
+   config/filesystem.php 
+
+          'public' => [ 'driver' => 'local', 'root' => public_path('storage'), 'visibility' => 'public', ],
+
+
+          If You Facing Prblem i.e. Image Is showing in cpanel but not in voyager so do this 
+
+

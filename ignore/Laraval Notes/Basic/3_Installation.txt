@@ -1,0 +1,43 @@
+How To Install Laravl --> There Are Two Methods 
+
+  1} Laraval Installer 
+
+  2} Composer Create-project
+
+------------------------------------------------------------------------------------------------------------------
+ 
+ Check PHP version php -v Sholud Be Grater Then 7.3
+
+  remmeber laravel composer won't work on version below 7.4.0 Just Update It .
+
+    1} Laravel Installer -->
+
+      Once We Need To Install Laravel And After That We Can Create Our Porjects 
+
+      To Install Laravel -> CMD------>
+
+                composer global require laravel/installer
+
+      Now To Create Project 
+
+          CMD------> ===>   laravel new projects_name
+
+       now goto CD/projects_name
+
+      Now To Run Projcects 
+
+        use CMD--> php artisan serve
+
+------------------------------------------------------------------------------------------------------------------
+
+   Create Projects using composer 
+
+       composer create-project laravel/laravel project_name
+
+		cd example-app
+
+		php artisan serve
+
+
+
+   

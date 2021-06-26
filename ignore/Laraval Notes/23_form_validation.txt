@@ -1,0 +1,72 @@
+test project --> Save Data Form 
+
+       To Validate A Form Use This -->
+
+      $req->validate([
+            'name'=>'Required',
+            'mobno'=>'required',
+            'password'=>'required',
+        ]);
+
+        Now Showing Errror Messages 
+
+
+         @if($errors)
+            <div class="container">
+                @foreach ($errors->all() as $err)
+                <h4>{{$err}}</h4>
+                @endforeach
+            </div>
+        @endif
+
+        $req->validate([
+            'name'=>'Required',
+            'mobno'=>'required',
+            'password'=>'required',
+        ]);
+
+        Now TO Show Perticulare Error Message To Perticular input box 
+
+
+		<h1>Add Members To Data BAse</h1>
+		<form action="adduser" method="post">
+		 @csrf
+		    <h5 style="color:red;">@error('name'){{ $message }} @enderror</h5>
+		    <input type="text" name="name" placeholder="enter name"><br>
+		    <h5 style="color:red;">@error('mobno'){{ $message }} @enderror</h5>
+		    <input type="text" name="mobno" placeholder="enter mobile number"><br>
+		    <h5 style="color:red;">@error('password'){{ $message }} @enderror</h5>
+		    <input type="text" name="password" placeholder="enter password"><br><br>
+		    <input type="submit"><br><br>
+		 </form>
+
+
+		 Now To Add Multiple Validation 
+
+		 $req->validate([
+            'name'=>'Required | min:5',
+            'mobno'=>'required | min:10 | max:10',
+            'password'=>'required | min:8 | max:16',
+        ]);
+
+        Like This 
+
+
+        Create Your Own RUle 
+
+
+        php artisan make:rule ToDOUpper 
+
+
+        Now Isnide app\rule\ToDoUpper.php
+
+        Is Created Now If You Want To Wrrite Your Rule Inside Function
+
+        Now If The Validation Pass Then It Do Nothing But If The Validation Has Error Then 
+
+        The message function is going to run. inside it wrrite your error messgae ;
+
+
+
+
+        

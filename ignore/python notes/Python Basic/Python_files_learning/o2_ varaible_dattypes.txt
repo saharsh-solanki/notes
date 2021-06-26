@@ -1,0 +1,44 @@
+* Variables --->  A Variable Name Given To A Memory Location In A Program For Example 
+
+   a=""
+
+* Datatype --> Type Of A Data For Example --> "hello" This Is A String 
+
+    Types Of Datatyps -> They Are Many Of Types But Primary 
+
+    1} Integer 2} String 
+
+    3} Float 4} Bolean 5} None
+
+ * Keyword --> Keyword Are The Reserved Word That Means Some Function Is Already Created With That Name For  
+               Example 
+                def , import , return , is etc .. 
+
+
+# Python Automatically Determin The Type Of Variable .
+
+	 Get What Is Type Of A Variable 
+
+	 ---- print(type(a))
+
+
+ * Rules OF Creating A Variable 
+
+   1} A Var  Can Only Start With alphabat or underscore
+
+   2} A Var Can Not Start With A Digit 
+
+   3} We Can Give Space Btween Var 
+
+   4} We Can Use Number Btw A Var Name like aa1
+
+   5} A Var Name Is CaseSenstive 
+
+
+
+
+
+
+
+ 
+

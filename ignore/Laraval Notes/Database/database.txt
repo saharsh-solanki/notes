@@ -1,0 +1,50 @@
+config database --> To Conect With database Go To .env 
+
+    Do Configurations Like Database Name Etc .
+
+
+
+ There Are Two Method To Connect With Database
+
+ 1} By DB 
+
+ 2} Using Model
+
+
+
+   1} By DB :--->
+
+    To use This 
+
+    use Illuminate\Support\Facades\DB; import This On The Top Where You want To Use Datasbe Functionality
+
+    Now 
+
+      function  index(){
+	        return DB::select("select * from userdata");
+	    }
+
+  2} By Model :--->
+
+  first create a model --> php artisan make:model modelname 
+
+     use App\Models\User;
+
+     Import this 
+
+
+      function  index(){
+	        return User::all();
+	    }
+
+	    If Your Model Name Is User and Your Table Name In Database Is userdata or users or employee
+
+	    So Now You Need To 
+
+	    class User extends Model
+		{
+		    use HasFactory;
+		    public $table="userdata";
+		}
+
+

@@ -1,0 +1,884 @@
+
+What is Ajax -->
+1} AJAX ----> Asyncronus JavaScript And XML.
+2} Aajx Is Not A Programing Language 
+3} Ajax Just Uses A combination of : 
+
+      a}   a browser Built In XMLHttpRequest object (To  Request A Data From A web Server)
+      b}   JavaScript And DOM (To Display Or Use The Data)
+
+AJax Allow The Web Page Intract With Backend Without Reloading WHole Page 
+
+  Broweser                                                                 Server
+ ---------------------------                                 ---------------------------------
+| an Event Occures          |                               | Process HttpRequest             |
+|                           |                               |                                 |
+| Create An XMLHttpRequest  |        |-----------|          |Create A Response And Send Data  |
+| object                    |------->| Internet  |--------->|Back To The USer                 |
+|                           |        |-----------|          |                                 |
+| send HttpRequest          |                               |                                 |
+|                           |                               |                                 |
+ ---------------------------                                 ---------------------------------
+                                                                            |
+                                                                            |
+                                                                            |
+      Browser                                                               |
+ -----------------------------                                              |
+|                             |                                             |
+| Process The returned Data   |           -----------                       |
+| Using javScript             |  <-------| Internet  | <--------------------|
+|                             |           -----------
+| Update Page Content         |
+ -----------------------------
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+              Why To Use Ajax
+ 1}   No Page ReloAd On Ech Request 
+ 2}   Update A part of page not a full page
+ 3}   Send Data To The Server In Background 
+ 4}   Recive Data From Server in Background 
+ 5}   Better USe Expirence 
+ 6}   Improve performe\
+ -----------------------------------------------------------------------------------------------------------------------------------
+ Language That Need 
+ 1} HTML
+ 2} CSS
+ 3} JAVASCRIPT
+ --------------------------------------------------------------------------------------------------------------------------------
+
+ Syncronus And Asyncronus ------->
+
+ *  Syncronus ----> When A Client Make A request To The Server He has To Wait Until The Response . Whic Means  Syncronus Call Blocks The Client Until The Operation Completed
+
+ * Asyncronus ----> Means If USer Send A request USing Ajax The They Are Free To Do ANother Task No need To Wait To Fisnish The Previous  Request 
+
+ =------------------------------------------------------------------------------------------------------------------------------
+
+  XMLHttpRequest  (XHR) ---> Is An API That Can Used By JavaScript , jScript , VBscript and Other Web Scripting Languages  To Transefer ANd manupulate Data from Web Server Using Http , Establishing An Independent Connection Chanel Betwen Client And Server
+
+  THe Data Can Be text,XML , JSON
+
+  IF We Are Working With Ajax We Need XMLHttpRequest 
+
+-----------------------------------------------------------------------------------------------------------------
+
+Syntext ------>
+
+dataType Variable_name = new XMLHttpRequest();
+
+var xhr= new XMLHttpRequest();
+
+--------------------------------------------------------------------------------------------------------------------
+
+Properties of XMLHttpRequest -->
+
+  1} onreadystatechange --> it defines the functions to be called when the readystate changes 
+       
+       The onreadystatechangeCan Be Callld multiple times during XHR Request . We Ignore All The Other State Than ReadySate ===4 , Which Means That The Request is Done
+
+  2} readysatate ----> This property return the state an xmlhttprequest of client is in . An XHR CLient exists in One Of The Following state 
+
+							          -------------------------------------
+							         |    value    |     state             |
+							         |-------------------------------------|
+							         |      0      |     UNSENT            |
+							         |             |                       |
+							         |      1      |     OPENED            |
+							         |             |                       |
+							         |      2      |     HEADERS_RECIVED   |
+							         |             |                       |
+							         |      3      |     LOADING           |
+							         |             |                       |
+							         |      4      |     DONE              |
+							         |             |                       |
+							         |-------------------------------------|
+
+
+   a} UNSET --> The XMLHttpRequest Is Create But The oepn() MEhtod Hasen't Been Called Yet It return 0 in  
+
+   b} OPENED -> OPened Mehtod Has Been Invoked . During This State , The RequestHeader Can Be Set Using The setRequestHeader()   
+      method and The send() Method can be called Which Will Initiate The fetch
+
+   c} HEADERS_RECIVED -> send() has been called and the response headers have been recived 
+
+   d} LOADING --> Response body is been recived . If Response Type Is Text or Empty string ,
+      response text has partial response as it laod
+
+   e} DONE --> The Fetch Operation is completed . this means that either the data has been transfer successfully or failed .
+   
+  3} responseType - It is Specify The Response Type i.e. xml text or json or etc.
+                    It Also Let The Author CHange The Reposne 
+          
+          * If the response has empty text then the default value or text is used
+
+          a} arraybuffer --> If The response containt binary data then it sholud use
+
+          b} blob --> If The response containt binary data then it sholud use
+ 
+		  c} document --> The Reposne Is an HTML Document or XML XML Dcument , As Appropriate based on the mimetype of recived data
+
+		  d} json --> Json Data is recived then we can set json data
+
+		  e} text --> The reposne i text
+ 
+  4} reponseText --> ItReturns the response data as a string
+
+  5} ResponseXML --> It Is The Readonly property it return a document Containing th exml or HTml Recived By The server
+                     If the request is unsuccesful , ha snot been send yet, or if the data can pasrsed as XMl or HTM:
+
+  6} status ---> It Return The Numerical http Status COde of the XHR .
+
+           We  Check Code Is Google Some of them Are --HTTP Status Code
+
+           200 : 'OK'
+           403 : 'Forbidden'
+           404 : 'Not Found' 
+  7} statusText ---> same But It Return The OK , Forebiiden Not Code
+
+  8} response --> This Property return reponse body such as blob arraybuffer etc
+
+  9} timeout --> We Can Specify The reposne time  in millisecond by default its is 0 menas no time out  i.e. in how much     
+         milisecondes the request can be terminated
+
+  10} responseURL --> It Return The serialied URL of the response or the empty string if the url is null 
+
+  11} upload --> It Can Use When We Want To Moniter The Upload . If We Are Uploading A video Then We Can Monitor The Progrress of 
+              that video
+
+              It Has Many Properties Like 
+              -------------------------------------------------------------------------------
+              | Eevent      |  Event Listener   |                                            |
+              |----------------------------------------------------------------------------- |
+              | loadstart   |  onloadstart      | Upload Has Begun                           |
+              |             |                   |                                            |
+              | progress    |  onprogress       |  amount progress so far                    |
+              |------------------------------------------------------------------------------|
+              |  And So On .......                                                           |
+              |--------------------------------------------------------------------------- --|
+
+
+   12} withCredential -->  Cookie related
+  
+----------------------------------------------------------------------------------------------------------------------------------
+
+XMLHttpRequest Methods ---> 
+ 
+ 1} open(method,url,anync,user,psw) ---> This Method is used to initilized newly created Request , or re-initializes an existing  
+                                         one. 
+               * } method: the type of request: GET or POST , HEAD < PUT 	
+
+               * url: the server (file) location this can be any file 
+
+               * async: true (asynchronous) or false (synchronous) i.e. if we send (asynchronous) request then it take true 
+                        or false if request is (synchronous)
+
+               * user : for authentication perpouse by default null or oprtional 
+
+               * pws :  for authentication perpouse by default null or oprtional 
+
+
+     example  --->> xhr.open("GET",'data.txt',true);
+
+                    xhr.open("GET",'Any url.com',true);
+
+    2} send() --> This Is Used To send Requets To The sevrer . This Is used For Get Request .
+
+       example -----> xhr.send();
+
+    3} send(body) --> This Is Used When We Want To send() data 
+              
+              example -----> xhr.send("name=harsh&ps=harsh");
+
+     4} setRequestHeader(header,value) ----------> This Method Is Used To Add A header Value Pair 
+
+              example -------->  xhr.setRquestHeader("Acess-control-allow-origin","*")
+
+     5} getResponseHeader(header_name) ---> This return The Specific header Informations from Th eserver
+
+         example --> xhr.getResponseHeader("last Modidfied")
+
+      6} if we want all header information the we can use
+
+         xhr.getAllResponseHeader()
+
+      7} abort() --> This Mehtod is USed When We Want To Cancel A Request , when a request is aborted its ready state is change to 
+                     XMLHrttprequets , unset(0) And The request atatus code is set 0
+
+      8} overrideMimeType(mineType) -->  This MEthod is used , fro example , to force a stream to be treated as parsed as text/xml ebven if the server does not report it as such 
+
+      this method must be call before calling send()
+
+      example --> xhr.ove........e('text/plain'): 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+        
+    Request Header --->
+
+    Request header is and HTTP header that can be used in an HTTP request and that does'nt relate to the content of the message, request header like Accept, ACcept- or if- allow to perform conditional request ; other like Cookie , User-Agent , or Referer precise the context so that the server can tailor the answer 
+    
+    GET /home.html HTTP/1.1
+
+    Etc ..
+
+    Response header ---> a response Header is an http header that can be used in an http reponse and that dosent relate to the content of the message . reponse headers , like age , location or server are used to give a more detailed contetxt of the reponse 
+
+    200 OK 
+    Acess-control-Allow-Origin 
+    Connection Keep-Alive 
+
+    etc........
+
+
+    Content-Type :--
+     
+     1} application/json
+     2} application/xml
+     3} application/text
+     4} application/pdf
+     etc...
+
+     1} text/css
+     2} text/xml
+     etc.....
+
+     for audio
+     1} audio/mpeg
+     2} audio/x-wav
+     etc.....
+     
+     1} application/vnd.oasis.opendocument.text
+     etc............................
+
+
+     for video 
+     1} multipart/mixed
+     2} multipart/from-data
+
+-------------------------------------------------------------------------------------------------------------------------
+
+How TO Create an Http Request 
+
+Evnt->Create request --> Initilized ---> 
+
+   For Get Method -->
+
+create an XMLHttpRequest request 
+
+              var xhr=new XMLHttpRequest();
+
+initilize created request 
+
+            xhr.open("GET","data.txt",true);
+
+send The request -->
+
+            xhr.send();
+
+     --------------------------------------------------------------------------
+
+      for POST MEthod ---> 
+
+
+create an XMLHttpRequest request 
+
+              var xhr=new XMLHttpRequest();
+
+initilize created request 
+
+            xhr.open("POST","data.txt",true);
+
+   if the Metho dtype is post then you may to set request header before sending request 
+
+   xhr.setRequestHeader("content-type",'application/JSON')
+
+
+send The request -->
+
+            xhr.send(body);
+
+         --------------------------------------------------------------------------
+
+        Handling Server Response ------>
+
+    AFter Making Request , You Will Recive A reposne Back .
+
+    At This Statge You Need To Tell The XMLHttpRequest object which JavaScript Function Will Heandle Resposne , by setting the onreadystatechange property of the object and naming it after teh fucntion to call when th request changes state
+                       
+          -------------------------------------------------------------------------
+
+           Ajax Request Repsonse 
+
+      sameple code --->
+           
+           var xhr=new XMLHttpRequest();
+           xhr.open("GET","data.txt",true);
+           xhr.onreadystatechange =function(){
+                   
+             if( xhr.readySate === XMLHttpRequest.DONE){
+               
+               if (xhr.status === 200){
+               consle.log(xhr);
+	           }
+	           else{
+	           console.log("problem With Request ");
+	              }
+
+         }
+
+       };
+       xhr.send();
+
+
+       except this we can also use 
+
+       var xhr=new XMLHttpRequest();
+           xhr.open("GET","data.txt",true);
+           xhr.onload()=function(){
+           //same Code// here
+       };
+       xhr.send();
+
+
+       This Code Is With Anonymus function but if we want use with arrow function then 
+
+       var xhr=new XMLHttpRequest();
+           xhr.open("GET","data.txt",true);
+           xhr.onreadystatechange =()=>{
+                   
+             if( xhr.readySate === XMLHttpRequest.DONE){
+               
+               if (xhr.status === 200){
+               consle.log(xhr);
+	           }
+	           else{
+	           console.log("problem With Request ");
+	              }
+
+         }
+
+       };
+       xhr.send();
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Example --2 onreadstatechage , readystate, etc .......
+
+Here We Have Checked ALl States
+
+We Can Also Use onload in exchange of onreadystatechange
+
+ $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    if(xhr.readyState===0){
+    console.log("Open Mehtod Is Not Called");
+    }
+     xhr.open("GET","login_check",true);
+      if(xhr.readyState===1){
+          console.log("Open Mehtod Is  Called 1");
+          }
+     if(xhr.readyState===2){
+    console.log("header recived");
+    }
+    if(xhr.readyState===3){
+    console.log("Loading.......");
+    }
+    if(xhr.readyState===4){
+    console.log("DOne");
+    }
+     xhr.onreadystatechange=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+           console.log(xhr);
+           }
+           else{
+           console.log(xhr);
+           }
+       }
+     }
+     //alert(password);
+     xhr.send();
+});
+
+});
+
+-------------------------------------------------------------------------------------------
+
+XMLHttpRequestEventTarget :---- It Is An Interface That Describe That Describe The Evn Handlers 
+                             You Can Impliment In AN Object That Will Handle Event for an XHR
+
+                a} onload ==> laod When XHR transection Completed Successfully
+                              
+                              Syntext :- XMLHttpRequest.onload=callback;
+
+                b} onprogress ==> Run When The Request Is in Progress , It is The Function called preiodically with the 
+                information when an XMLHttpRequest before success completes
+                            
+                            Syntext :- xhr.onprogress=function(e){};
+                                    
+                                    a} e.loaded; //The Amount Of Data Currently Transfered 
+                                    b} e.total; // teh amount of total data that has to be transfered
+
+                                                      examle =>
+                                                        $(document).ready(function(){
+
+															$("#login_btn").click(function(){
+															    var email=$("#email_id").val();
+															    var password=$("#password").val();
+															     var xhr=new XMLHttpRequest();
+															    xhr.open("GET","{% static 'data.text' %}",true);
+															     xhr.onload=function showdata(){
+															       if(xhr.readyState===XMLHttpRequest.DONE){
+															           if (xhr.status===200){
+															           console.log(xhr.responseText);
+															           }
+															           else{
+															            console.log("error");
+															           }
+															       }
+															     }
+															    xhr.onprogress=function(e){
+															    console.log("Loaded",e.loaded);
+															    console.log(e.total);
+															    };
+															     xhr.send();
+															});
+
+															});
+
+
+
+                c} onerror ==>> When an XHr request object failed due to en error
+                                  
+                                  Syntext :- XMLHttpRequest.onerror=callback;
+
+                      example of c d e f 
+
+                         $(document).ready(function(){
+
+							$("#login_btn").click(function(){
+							    var email=$("#email_id").val();
+							    var password=$("#password").val();
+							     var xhr=new XMLHttpRequest();
+							    xhr.open("GET","{% static 'data.text' %}",true);
+							     xhr.onload=function showdata(){
+							       if(xhr.readyState===XMLHttpRequest.DONE){
+							           if (xhr.status===200){
+							           console.log(xhr.responseText);
+							           }
+							           else{
+							            console.log("error");
+							           }
+							       }
+							     }
+							    xhr.onprogress=function(e){
+							    console.log("Loaded",e.loaded);
+							    console.log(e.total);
+							    };
+							    xhr.onerror=function(){
+							    console.log("error");
+							    };
+							    xhr.onloadstart=function(){
+							    console.log("started");
+							    };
+							     xhr.onloadend=function(){
+							    console.log("ended");
+							    };
+							     xhr.send();
+							});
+
+							});
+
+                d} onloadstart ==> laod When our data is start to transfered
+
+                                    Syntext :- XMLHttpRequest.onloadstart=callback;
+
+
+                e} onabort ==> Run When An Request is aborted 
+                                  
+                                  Syntext :- XMLHttpRequest.onabort=callback;
+
+                f} ontimeout ==> Before This run We Need To set timeout By Default Its 0 so if we set it 2sec then after when 2 sec completed this function ocuuree
+
+                                     Syntext :- xhr.timeout=function(){};
+ 
+                              $(document).ready(function(){
+
+								$("#login_btn").click(function(){
+								    var email=$("#email_id").val();
+								    var password=$("#password").val();
+								     var xhr=new XMLHttpRequest();
+								    xhr.open("GET","{% static 'data2.text' %}",true);
+								    xhr.timeout=2;
+								     xhr.onload=function showdata(){
+								       if(xhr.readyState===XMLHttpRequest.DONE){
+								           if (xhr.status===200){
+								           console.log(xhr.responseText);
+								           }
+								           else{
+								            console.log("error");
+								           }
+								       }
+								     }
+								    xhr.onprogress=function(e){
+								    console.log("Loaded",e.loaded);
+								    console.log(e.total);
+								    };
+								    xhr.onerror=function(){
+								    console.log("error");
+								    };
+								    xhr.onloadstart=function(){
+								    console.log("started");
+								    };
+								     xhr.onloadend=function(){
+								    console.log("ended");
+								    };
+								     xhr.ontimeout=function(){
+								    console.log("timeout");
+								    };
+								     xhr.send();
+								});
+
+								});
+
+
+
+                f} onloadend ===>  
+-----------------------------------------------------------------------------------------------------------
+
+Example of properties with text data 
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    xhr.open("GET","{% static 'data.text' %}",true);
+   xhr.withCredentials=true;
+   xhr.responseType="text";
+   xhr.setRequestHeader("Content-Type","application/json")
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+           console.log(xhr.responseText);
+           console.log(xhr.statusText);
+           console.log(xhr.responseURL);
+           console.log(xhr.response);
+           console.log(xhr.withCredentials);
+           console.log(xhr.getAllResponseHeaders());
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send();
+});
+
+});
+  </script>
+
+
+------------------------------------------------------------------------------------------------
+
+Example Working With Json Data ==>>
+
+when get data from the server like {"name":"sahesh"}
+
+its a json data and javascript does not know so we need parse the data in json fromate for javascript
+
+ xhr.responseType="json"; by this 
+
+ print  ===  console.log(xhr.response.name);
+
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    xhr.open("GET","{% static 'data.json' %}",true);
+    xhr.responseType="json";
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+          console.log(xhr.response.name);
+
+          //$("#data_text").text(xhr.responseText);
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send();
+});
+
+});
+  </script>
+
+------------------------------------------------------------------------------------------------
+
+No Another Method To Parse The data we can use 
+
+let obj=JSON.parse(xhr.response);
+
+obj.name;
+
+------------------------------------------------------------------------------------------------
+ 
+ example of working with xml data ==>
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    xhr.open("GET","{% static 'data.xml' %}",true);
+  xhr.responseType="document";
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+          console.log(xhr.response.getElementsByTagName("student"));
+          console.log(xhr.response.getElementsByTagName("student")[0]);
+          console.log(xhr.response.getElementsByTagName("student")[0].getElementsByTagName("name"));
+          console.log(xhr.response.getElementsByTagName("student")[0].getElementsByTagName("name")[0]);
+          console.log(xhr.response.getElementsByTagName("student")[0].getElementsByTagName("name")[0].childNodes[0]);
+          console.log(xhr.response.getElementsByTagName("student")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send();
+});
+
+});
+  </script>
+
+We Are Getting Data by This
+ console.log(xhr.response.getElementsByTagName("student")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+ So We Need TO Loop It 
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    xhr.open("GET","{% static 'data.xml' %}",true);
+  xhr.responseType="document";
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+        x=xhr.response.getElementsByTagName("student");
+        for(i=0; i< x.length; i++){
+         console.log(xhr.response.getElementsByTagName("student")[i].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+         var m=$("#data_xml").html();
+        $("#data_xml").html(m+"<p> Name = "+x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+"</p>");
+        }
+          console.log(xhr.response.getElementsByTagName("student")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue);
+
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send();
+});
+
+});
+  </script>
+
+------------------------------------------------------------------------------------------------
+
+Working With Demo URL JSON DATA  ==>>
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    xhr.open("GET","https://reqres.in/api/users",true);
+  //xhr.responseType="text";
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+          let obj=JSON.parse(xhr.response);
+     console.log(obj.data[0].id);
+        for(i=0; i<obj.data.length; i++){
+             console.log(obj.data[i].id);
+           var p=$("#data_json").html();
+           $("#data_json").html(p+"<p class='bg-light text-dark'> id :"+obj.data[i].id+"<br>Email :"+obj.data[i].email+"</p>");
+          // console.log(obj);
+           }
+
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send();
+});
+
+});
+  </script>
+
+------------------------------------------------------------------------------------------------
+ 
+ How To Show Data In Table 
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+    xhr.open("GET","https://reqres.in/api/users",true);
+  //xhr.responseType="text";
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+          let obj=JSON.parse(xhr.response);
+     console.log(obj.data[0].id);
+        for(i=0; i<obj.data.length; i++){
+             console.log(obj.data[i]);
+
+           $("#table").append("<tr><td class='bg-light text-dark'>"+obj.data[i].id+"</td>"+"<td class='bg-light text-dark'>"+obj.data[i].email+"</td>"+"<td class='bg-light text-dark'>"+obj.data[i].first_name+" "+obj.data[i].first_name+"</td>"+"<td class='bg-light text-dark'>"+obj.data[i].last_name+"</td></tr>");
+          // console.log(obj);
+           }
+
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send();
+});
+
+});
+  </script>
+
+------------------------------------------------------------------------------------------------
+
+ <script>
+   $(document).ready(function(){
+
+$("#login_btn").click(function(){
+    var email=$("#email_id").val();
+    var password=$("#password").val();
+     var xhr=new XMLHttpRequest();
+     var datas='{"name":email,"salary":password,"age":"25"}';
+    xhr.open("POST","http://dummy.restapiexample.com/api/v1/create",true);
+  //xhr.responseType="text";
+     xhr.onload=function showdata(){
+       if(xhr.readyState===XMLHttpRequest.DONE){
+           if (xhr.status===200){
+          let obj=JSON.parse(xhr.response);
+     console.log(obj);
+
+
+           }
+           else{
+            console.log("error");
+           }
+       }
+     }
+
+     xhr.send(datas);
+});
+
+});
+  </script>
+
+<!-- Ajax-->
+<center>
+
+------------------------------------------------------------------------------------------------
+
+We Can USe Csrf_exempt but its not the correct way becase our app get hacked
+
+ 
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+     the method we are useing is profession here is the new method to use ajax
+
+     
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+Example Project :--- example_ajax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

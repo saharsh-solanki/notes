@@ -1,0 +1,4 @@
+ Input funtion -->This Function Is Allowed User To Enter Input Useing Keyboard As String 
+
+ input("Enter A Number Or String ")
+

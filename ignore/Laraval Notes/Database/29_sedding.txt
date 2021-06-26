@@ -1,0 +1,33 @@
+test projects --> ex_sedding
+
+ WHAT IS Sedding --> seeding means adding some dommy data to database
+
+ You Need A seeder file 
+
+ php artisan make:seeder filename_memberseeder
+
+ file--> database/seeder/
+
+ use Illuminate\Support\Facades\DB;
+use Illuminate\Support\str;
+
+     DB::table('members')->insert([
+           'username'=>str::random(10),
+           'password'=>str::random(10),
+       ]);
+
+Use This Command To Seed Data 
+
+ php artisan db:seed --class=memberseeder
+
+ Now One Data Is Inserted In Database If We Want To Add More Then One Data Then wr Can Loop This 
+
+  for($i=1;$i<11;$i++){
+                DB::table('members')->insert([
+                    'username'=>str::random(10),
+                    'password'=>str::random(10),
+                ]);
+        }
+
+
+like This 

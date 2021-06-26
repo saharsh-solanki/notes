@@ -1,0 +1,59 @@
+
+   What is Blade Template -->  Blade Template Converts Plan Text Into Php Text For Example 
+
+      <?php $var; ?> Convert To This  {{$var}}
+
+      By This We Can Do Functional;ity Like {{10+10}}  It Return 20 etc 
+
+      We Can also use any php function like {{count($username)}} return the total data 
+
+
+      If Conditon 
+
+
+		@if($users=='anil')
+		 Hello Logged In By {{$users}}
+		@endif
+
+      
+       @if($users=='anil')
+		 Hello Logged In By {{$users}}
+		 @elseif($users=="Sagr")
+		 Else if Conditon Run Sussfully!!
+		 @else
+		 Unkowm User
+		@endif
+
+
+    Evvery Loops In Php is start with @ And Ends With @ 
+
+
+    @for($i=1;$i<=10;$i++)
+	  {{$i*2}}<br>
+	@endfor
+
+
+
+	Include A File 
+
+
+	create a file xx.blade.php now go to login.blade.php and 
+
+	@include('xx')
+
+	So The  File Will be Included
+
+
+	Convert Php Data Into Java Script 
+
+	<script>
+	 var data=@json($userdata);
+	 console.log(data[0]);
+	</script>
+
+	csrf token genrater function 
+	
+	@csrf
+
+
+	

@@ -1,0 +1,24 @@
+Test Project --> ex_stub
+
+What Stub --> Time Saving Method --> Suppose You Want To Make 20 Controller model or Etc And The Index() In Eery Controller Will Be 
+                                     Same So You Can Use Stub .
+
+
+          First We Need To --> 
+
+                    php artisan stub:publish
+
+
+      It Will Generate many file inside the stub folder 
+
+      Search for Controller.plain.stub file 
+
+      This Now Add The Function You Want To Make Default 
+
+      and php artisan make:controller User
+
+
+      For Model Goto stub/model.stub
+
+      Add 	
+

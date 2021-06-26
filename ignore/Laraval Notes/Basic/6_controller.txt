@@ -1,0 +1,45 @@
+What Is Controller --> Controller is The Central unit of any MVC Based Framework. It Controller Everthing Like
+                   DB Html Etc .
+
+
+Cretae A Controller --> php artisan make:controller UserController # Controller name 
+
+  Goto app/http/controllers/  
+
+
+   Now Create A Function To Print Anthing 
+
+    function show(){
+        return "Hello Returned From Controller"
+    }
+
+    Now We Need To Create Rout to load This (Like Url set in django)
+
+    To Do routes/web.php In Laravel 7 We Don't Need To Import This Controller But Now We Need to Import This Controller 
+
+    use App\Http\Controllers\UserController;  Use This To Import 
+
+    use This 
+
+    Route::get("userlogin",[UserController::class,"show"]);
+
+    In laravel 7 This code is Used 
+
+    Route::get("userlogin",'UserController@show');
+
+
+
+Now To Pass Data From Url
+
+   Route::get("userlogin/{id}",[UserController::class,"show"]);
+
+   function show($id){
+
+        return $id;
+    }
+
+    To Retrive Data 
+
+
+
+    

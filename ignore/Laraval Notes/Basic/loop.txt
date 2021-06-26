@@ -1,0 +1,60 @@
+1} for loop -->
+
+		 @for ($i=0;$i<=10;$i++)
+		    {{$i}}
+		 @endor
+
+
+ 2} foreach loop -->
+
+        @foreach ($collection as $item)
+		    {{$item->key}}
+		 @endforeach
+
+ 
+ 3} forelse loop --->
+
+
+            @forelse ($collection as $item)
+                  {{$item->value}}
+             @empty
+                   This Condtion Will Run If There Is No Recored
+            @endforelse
+
+ 4} @switch loop
+
+      @switch($var)
+           @case('Bary')
+              Name Is Bary
+           @break;
+           @case('haryr')
+              Name Is hay
+           @break;
+
+           @default
+      @endswitch
+
+
+ 5}  while loop Same 
+
+ 6} Do While Loop Same 
+
+ 7} @empty 
+
+          @empty($var)
+
+              name IS EMpty
+
+          @endempty
+
+
+  8} isset ------->
+
+                @isset($name)
+
+                    {{$name}}
+
+                @endisset
+
+
+

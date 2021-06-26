@@ -1,0 +1,27 @@
+
+
+   What Is Commponnets -->  Is A Peace Of Code We Can use agin Again Like Header 
+
+   Create a componnets ->
+
+      CMD php artisan make:component comp1
+
+      To Use go to xxx.blade.php Top <x-comp1 /> Component name 
+
+      Now To Pass Data With THis Component 
+
+      <x-comp1  componentName="HERRO"; />
+
+      Now Goto header.php
+
+      public $title="";
+    public function __construct($componentName)
+    {
+        $this->title=$componentName;
+    }
+
+
+    <div style="height:50px;background:yellow;width:100%;"><h1>{{$title}}'s Header</h1></div>
+
+
+    First

@@ -1,0 +1,28 @@
+	SO SUppose You Cretated a Table Called Restaurant And You Want To Add Something Extra like A Catagery FIeld or Anyything 
+
+	So You Need To 
+
+	* Overide The Views  --->
+
+			SO Do That Goto Project/vendor\tcg\voyager\resources\views\bread
+
+
+			Now Do Not Try To Edit Or Add Here Becase We Want To Override Only 1 Table Not All So If You Want To Override member 
+
+			then 
+
+			 resources\views\vendor\voyager\member\ Now Create Same File name like browes.blade.php or edit-add.blade.php and
+
+			 Just COpy Past The Content And Add NEw Content or things also Whatever You Want
+
+    * Overiding Controlller --> Goto Admin/edit bread and COntrollername there
+
+                          Now Create A Controller for this inside 
+
+                              app\http\voyager\productcontroller
+
+                          Now DO Same COpy Content Form There And PAst It In This Controller 
+
+                           Now Edit The use on The TOp Becase Now The Locatio Of That COntroller is diffrent and Name Is ALso Diff.
+
+                           

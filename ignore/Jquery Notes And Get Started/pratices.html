@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JQUERY LEARNING </title>
+</head>
+<body>
+<button id="tg" >Click</button>
+<p id="p1">Click Me</p>
+<p>Click Me2</p>
+<p>Click Me3</p>
+</body>
+<!--- We Should Use Jquery After Body Becase Our Whole Page Is Loaded -->
+<script src="jquery-3.5.1.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+	//example toggle
+	 $('#tg').click(function(){
+
+//css method example
+//$('p').css('background-color','red');
+//$('p').css('font-size','50px');
+
+//$('#p1').text() //used To get Text OF The Selector
+//$('p').empty() //delete the insided text only 
+
+//$('p').remove() // delete The Whole Field 
+
+//        $('p').animate({opacity:0.1},3000);
+  //      $('p').stop()
+	//	$('p').animate({opacity:0.9},3000);
+	//	$('p').animate({width:'50px'},3000);
+
+//example animate
+//$('p').animate({
+//		           opacity:0.5,
+//		           height:'5px'
+//		},3000);
+
+// $('p').toggle(1000);
+//$('p').fadeOut(5000);
+//$('p').fadeIn(5000);
+//$('p').fadeToggle(2000);
+//$('p').fadeTo(5000);
+
+//slide Example'
+//slideToggle() ==> Move Content To Up Direction 
+  //              $('p').slideToggle(1000)
+
+ });
+	
+//$('p').hide();//Hide The element
+//$('p').hide(1000);//hide after 1000mili seconds
+//on method
+//used if want handle multiple evnts  
+/*
+$('p').on({
+	click:function(){
+console.log("MuseClicked");
+},
+mouseleave:function(){
+console.log("Mouse Entered");
+}}
+);
+*/
+
+ /*  $('p').dblclick(function(){
+	console.log('You Doble Clicked On P')
+});
+*/
+/*
+$('p').mouseenter(function(){
+	console.log('You Entered')
+});
+*/
+	/*
+	$('p').click(function() {
+		console.log("Clicked");
+		 //$('p').hide(); //To Hide We Use This Hide All P Tag 
+        // $(this).hide(); //Hide Only The Current Click Function
+	});
+	*/
+
+});
+
+	
+</script>
+</html>

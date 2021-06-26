@@ -1,0 +1,41 @@
+How To Remove .html .php from url
+
+With The Help .htacesss File We Can Do Many Things Like
+1} Redirect User To Diffrent We Page 
+2} Hendle An Error And Send User To A page 
+3} Protect A specific directory By Password
+4} Block User By IP
+5} Preventing Hot-Linking of your images
+6} Rewrite URLS
+7} Specify Your OWn Errorn Document 
+# turn on the engin
+RewriteEngine On
+RewriteRule ^about$ about-us.php [NC,L]
+
+#rule for about
+This Will Send This about-us.php To about 
+
+#NC menas NON CASE SENTIVE 
+
+
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#This Will Remove Extentetion Suppose If File Name is 1.php then file can be acess using 1 or name.php to name
+
+
+
+
+RewriteRule ^article/([a-zA-Z-0-9-]+) view-full-offer.php?offerid=$1 [NC,L]
+This Rule Make Url Like doamain/article/......
+
+
+
+
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+
+RewriteRule ^about$ about.php [L]
+
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]

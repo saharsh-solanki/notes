@@ -1,0 +1,14 @@
+test project --> ex_stub
+
+Fluent Strings --> 
+
+    //$data=str::ucfirst($data);
+    //$data=str::camel($data);
+    //$data=str::replaceFirst('Hy','Hello',$data);
+
+    COnverting This Into
+
+    $data=Str::of($data)
+               ->ucfirst($data)
+               ->camel($data)
+               ; 

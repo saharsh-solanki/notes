@@ -1,0 +1,10 @@
+test Projects --> Save_data_db
+
+dlelete Data From DataBase --> 
+
+ function delete($id)
+    {
+        $data = member::find($id);
+        $data->delete();
+        return redirect('show');
+    }

@@ -1,0 +1,57 @@
+why to learn ml -->  
+
+Introduction --> In  ML We Teach Machine To Act According To Situation. 
+
+      Example --> Youtube Video Recomandation Use Ml Consept To Show Video To User.
+
+  Carrer In ML --> 1} Bettter Carrer Opportuntites 
+
+                   2} ML Is Future 
+
+                   3} Ml is Fun 
+
+                   4} Highly Demanded Profession 
+
+                   5} High Salaries 
+
+
+
+why Python For Machine Learning --> 
+
+    Python is Eassy 
+
+    python is fast enough 
+
+    python has liberies (tenserflow , sciketlearn)
+
+    python is cross platform 
+
+
+ -->In Ml Programs Data Are Inputs and Output is Set Of Rules . 
+
+      ML Terms Was was First used By  Arthur Sameuel one of The Pionners of A.I. At IBM In 1995 .
+
+       Fetures -- > For Example A a Cat Have Ear , Nose Etc . So Are The Fetures 
+
+       Lable --> Are Output That Provided Means After Recognizing It It Will Be Cat Cat Is Lable .
+
+
+ How To Collect Data For ML .
+
+    
+
+   4} UCI ML Repository --> Serch On Google And Then Open Link ( For Example If We Want To Recognize A Flower Then The Feture Of Flower Are Already Avalaible On It  )
+
+
+
+Steps For Ml problems --> 
+
+    1} problem Identification
+
+     2} Data Collection And Validations 
+
+     3} Model Building 
+
+     4} FeedBack 
+
+      

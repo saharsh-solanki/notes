@@ -1,0 +1,9 @@
+file - --> 
+
+          open method open a a file .
+
+          f=open("file_name","method") 
+
+          by default it takes r means read 
+
+          

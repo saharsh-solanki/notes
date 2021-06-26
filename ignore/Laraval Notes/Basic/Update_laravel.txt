@@ -1,0 +1,8 @@
+Check version --> laravel -v
+
+  Remove Current Laravel -----> composer global remove laravel/installer 
+
+  Reisnatll Laravel ----------> composer global require laravel/installer 
+
+ Create Project --> laravel new project_name --jet
+

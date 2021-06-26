@@ -1,0 +1,19 @@
+Tupples --> A Tupples Is A Immutable Datatype In Python .
+
+           ( Immutable ==> Can Not Change .)
+
+           t=() Empty Elelemet Tupple.
+           
+           t=(1,) Need One , if One Elelemnt Tupple. Why To Use , ( Becase Usko Lagega ki Apna sirf 1 likha h brackets under (1) )
+
+           t=(2,3,4) multiple Element Tupple.
+
+
+  * Once a Tupple. IS Defined It Can  Not be Altered Or Mainupulated 
+
+     method of tupples --> 
+
+      1} t.count(1) count the given elelment in the tupples .
+
+      2} t.index(44) Give the index of 44 .
+      

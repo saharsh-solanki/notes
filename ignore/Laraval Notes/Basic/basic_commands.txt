@@ -1,0 +1,41 @@
+1} php artisna serve                                 --> run A Server
+
+2} php artisan make:controller connanme              --->Cretae A Controller 
+
+11} php artisan make:controller connanme --resourse   --->Cretae A Controller  with add delete update etc function
+
+
+3} php artisan make:model moname                     --> Create A Model 
+
+4} php artisan make:model moname  -m                  --> Create A Model With migrations
+
+5} php artisan make:migration create_tablename_table  --> Create Migration for tbale 
+
+6} php artian migrate                                 --> Mihrate The Migrations 
+
+7} php artian migrate:reset                           --> Delete The Migrations Made By 
+
+8} php artian refresh                                 --> Make Migrations Again
+
+9} php artian fresh                                    -->del. The Migratiosn and Cretae It Again
+
+10} php artian migrate:status                          --> Used To Show The Migrations Status 
+
+12} php artisan clear-compiled                        
+
+13} php artisan down                                   -> Put Website in Maintanance Mode
+
+14} php artisan up                                     --> Put Back Website From Maintainance Mode To Live
+
+15} php artisan help                                 ----> Provide Some Help Coommand and Stuff That Can Be USed
+
+
+16} php artisan --version                              --> Get Vesrion Info
+
+17} php artisan optimize                             --->
+
+18} php artisan cache:clear                           ---> clear Cache //When Ever Your Css Is Not Loading 
+
+19} php artisan key:generate                        ----> Generate Application Key
+
+20} php artisan ui tailwindcss --auth               --> create a 

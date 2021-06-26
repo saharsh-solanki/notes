@@ -1,0 +1,25 @@
+test project -->
+
+What Is Join --> Suppose You Have Two Table User->id,name,mobno,password;   and another table address->id,address;
+                 
+                 In The Both Tbale id is Same So I Want To Know The Address In The Same . Means Joining Both The Data or Table In TO one .
+
+
+  HoW to JOin This Two Tbale 
+
+
+  return DB::table('table_one_name')->join('tabl;e_second_name','table_one_members.id',"=",'tbl_2_userdata.id')->get();
+
+  Now The Filed Will Get Join
+
+
+  Now If We Want To Select Data From Specic Tbale 
+
+
+  return DB::table('members')->join('userdata','members.id',"=",'userdata.id')->select('userdata')->get();
+
+
+Where Clause 
+
+
+   return DB::table('members')->join('userdata','members.id',"=",'userdata.id')->where('name','	saharsh')->get();

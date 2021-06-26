@@ -1,0 +1,291 @@
+------------------------------------------------------------------------------------------------------------------------
+
+Jquery ---> Jquery Simplefied version of javascript 
+
+------------------------------------------------------------------------------------------------------------------------
+
+There Two Version Or File Of Jquery 
+1) jquery-3.5.1.min.js ( Production Version, Compressed ) --->
+2) jquery-3.5.1.js (  Uncommpressed Version ) --->
+
+------------------------------------------------------------------------------------------------------------------------
+
+Get Started ===> There Two MEthod Use Jquery One IS Icluded Online or Second IS Offlin By Downloading its File 
+
+1] Step 1 (Offline) ==> Using This  Tag Include Any one 
+
+<script src="jquery-3.5.1.js"></script>
+ 
+2] Step 2 (Online) ==> CDN --> Content Delevery Network (We can Use Any CDN from Google , MIcrosoft Etc )
+
+   ...Using Google CDN.....
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+$ --> means Jquery 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Basic Syntext Of jquery ==>
+
+For Example We Have a <p> Hii Click Me </p>
+
+......  $('selector').action();  .........
+
+$('p').click(function(){
+
+	console.log("cliccked Successfully")
+
+});
+
+------------------------------------------------------------------------------------------------------------------------
+
+To Hide ==>
+
+$('p').click(function(){
+
+     $('p').hide(); if We Have 5 p Tag Then This Hide ALll oF them
+
+     $(this).hide(); //Hide Only The Current Click Selector
+
+});
+
+------------------------------------------------------------------------------------------------------------------------
+
+Selectors -->There Are The Types OF Selectors ==>
+
+1) Element Selector -->
+  
+                        $('p').click(function(){
+                         
+                         //Body
+
+                         });
+
+2) ID Selector      -->
+                         $('#id').click(function(){
+
+											   //Body
+
+											});
+3) Class Selector   -->
+
+
+							$('.class').click(function(){
+
+							   //Body
+
+							});
+
+ 4) Other Selector 
+           
+            4.1] * Selector ==> Select Everything
+
+                               $('*').click(function(){});
+            
+            4.2] tag.class (p.odd) ==> Select p tag Where Class is odd
+
+                              $('p.odd').click(function(){});
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Suppose If Your Page Stiil Loading And Jquery Loaded Before That Loadation of Tag class Then error Comes So we 
+Should Run Our Jquery AFter The The Whole Page Got Loaded ... Syntext---->
+
+$(document).ready(function(){
+	// Jquery Code Here
+
+});
+
+Its BAsic MEaning if That Run The Code When The document is Ready (Page IS Fully Loaded )
+
+------------------------------------------------------------------------------------------------------------------------
+
+Events ===> Events Are Actions Happed By User. When They Are Intracting With Our Web Pages 
+
+There Are Many Types Of Events
+
+1) Mouse Events    ==> click,dblclick,mouseenter,mouseleave,mouseup,hover
+2) Keyboard Events ==> keypress, keydown,keyup
+3) Form Events     ==> submit, change, focus , blur 
+4) document/windows Events ===> load,reset,scroll, unload 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Events Example ==>
+
+$('p').dblclick(function(){
+	console.log('You Doble Clicked On P')
+});
+
+------------------------------------------------------------------------------------------------------------------------
+
+Handling Multiple Events ==> Basic Syntext
+
+$('slector').on({Event1:function(){//Code},event2:function{//code for second function},......N})
+
+Example ==>
+
+$('p').on({
+	click:function(){
+console.log("MuseClicked");
+},
+mouseleave:function(){
+console.log("Mouse Entered");
+}}
+);
+
+------------------------------------------------------------------------------------------------------------------------
+
+Hide And Show Method 
+1) hide ==> Syntext.hide()
+    
+    $('selector').hide(**arguments);
+    example ==>
+    $('p').hide(1000);//Hide After 1000 Mili seconds
+
+     $('selector').hide(**arguments,function(){});
+    example ==>
+    $('p').hide(1000,function(){//code});//Hide After 1000 Mili seconds then the function scode will be run
+
+------------------------------------------------------------------------------------------------------------------------
+
+toggle ==> Toogle Function use Hide or Show If The selected selector hide the togle function show it and if show hide it 
+
+ $('p').click(function(){
+ $('this').toggle(1000);
+ });
+
+We Have ==>
+
+1) fadeIn(time,callback) ==> Hide The element 
+                        $('p').fadeIn(1000)
+                        $('p').fadeIn(1000,function(){})//call back mehtiod is optional
+
+2) fadeOut(time,callback) ==> Hide The element 
+                        $('p').fadeOut(1000)
+
+3) fadeToggle(time,callback) ==> Hide The element 
+                        $('p').fadeToggle(1000)
+
+4) fadeTo(time,callback) ==> Hide The element 
+                        $('p').fadeTo(1000)
+
+------------------------------------------------------------------------------------------------------------------------
+
+slides Method ==> There Are Three Method Of Slide
+
+1) slideUp(speed,callback) ==> Move Content To Up Direction 
+                             $('p').slideUp(1000)
+
+2) slideDown(spped,callback) ==> Move Content To Down Direction 
+                              $('p').slideDown(1000)
+
+3) slideToggle(spped,callback) ==> Move Content To Up,Dwon Both Direction of element is in dwon teh move to up if up 
+                                   the move to dwon 
+                             $('p').slideToggle(1000)
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Animate Method ==>
+
+        syntex ==>
+
+        $('selector').animate({
+		        property1:value1,
+		        prop2:value2,
+        },speed)
+       
+		$('p').animate({
+		           opacity:0.1,
+		           hight:'150px'
+		},3000);
+    ----------------------------------------
+
+		$('p').animate({opacity:0.1,},3000);
+		$('p').animate({opacity:0.9,},3000);
+		$('p').animate({width:'50px,},3000);
+
+		if We Writte like this then this we called as queue it will be execute on by one
+
+
+ To Stop Current Animation We Use .stop()
+
+example ==> $('p').stop();
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+1) text() method ==>
+
+$('p').text() //This Used To Get Text Inside The Elements
+
+$('p').text('Hii This Is New Text') // This Is Used To set The New Text 
+
+2) html() Mehtod ==>
+
+$('p').html() //This Used To Get html of Elements
+
+$('p').html('Hii This Is New html') // This Is Used To set The New Html Code 
+
+3) val() if we Want To Get Etxt or Set Text of the form field we use val method
+
+$('p').val() // This Is Used To Get Value
+
+$('p').val('Seted') // This Is Used To Set The Value of Form Field
+
+4) empty()
+
+$('p').empty() // delete the text only 
+
+5) remove()
+
+$('p').remove() // remove The Elements
+
+6) addClass() Add The Claass
+                
+                $('p').addClass('New Class Name')
+
+7) removeClass() Remve The Class
+                
+                $('p').removeClass('New Class Name')
+
+8) toggleClass() 
+
+                $('p').toggleClass('New Class Name')
+
+------------------------------------------------------------------------------------------------------------------------
+
+.css('css-propetry')
+
+To Set Css To The Elements 
+
+         $('p').css('background-color','red')
+
+------------------------------------------------------------------------------------------------------------------------
+
+ajax==> art of exchanging data without reloading the page 
+
+1) .get('url',function(){})
+
+$.get('url',function(data,satus){
+	alert(data);
+})
+
+------------------------------------------------------------------------------------------------------------------------
+
+append() - Inserts content at the end of the selected elements
+prepend() - Inserts content at the beginning of the selected elements
+after() - Inserts content after the selected elements
+before() - Inserts content before the selected elements
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+

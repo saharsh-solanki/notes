@@ -1,0 +1,61 @@
+#String --> 
+
+          String IS A Datatype in python .
+
+          Strings Is A Sequence Of Char. Inclosed In Quotes.
+
+          We Can Writte String In This Three Fromate.
+
+          1} Single Quotes -> Suppose You Have A String In Which You Use " Quotes Like a='saharsh"s' So You Can Use Anywhere In This Single 
+                              The Single Quotes string start with ' and end to ' So Inside This We Can Writte Any other Quotes
+          
+          2} Double Quotes -> Same If You Want To Use ' single Quotes in Your stirng so you can essilly use it like 
+
+                              a= "Saharsh's"
+
+          3} tripple Quotes -> If You Want To use single and double Quotes in your string so you can use both like and also can break to new linebreaks
+
+                             a='''I Have Purchesd rahul's bag and He is a "Great Leader
+                             Yes everybody know him .
+                             "'''
+
+# String slice -> 
+
+                a="Saharsh"
+                 
+                print(a[0])  ---> s 
+
+                print(a[3])  ---> h
+
+                print(a[0:3]) --> sah
+
+
+
+# Skip Value -->
+                 
+                 print(name[0:5:2])
+
+                 this will print evry second value like shrh a a s ko skipp kar diya becase we put 2
+
+
+
+# String Function -->
+
+               len(var)  --> print the length
+
+               var.endswith('sss') --> if the string is end with that string then it will return true else return false .
+
+               var.count('a') --> this will count all the charater  or string
+
+               var.capitalize() --> This Will Capitalize The First word of the string var.capitalize
+
+               var.find('saharsh') --> used to find the given string orr charater.
+
+               story.replace('a','p') --> used to replace any string or charater
+
+
+# Escape Sequence Char. --> Sequence of the  char of the backslash.
+                            
+                            Escape Sequence Char. Compries more then one Character but represent one char when used within the string.
+
+                            Example --> \n (new line) , \t ( new tab ), \' ( single Quotes ),\\ ( backslash ) etc
