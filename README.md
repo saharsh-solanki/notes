@@ -13,3 +13,4 @@ My Personal Notes ( Hosted For My Self )
 * [Database Querys](https://paytmbadshah.github.io/notes/Database%20Querys/)
 
 
+
