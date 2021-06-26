@@ -13,6 +13,7 @@ Python ( Django Notes )
 * [Schedule Task](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/schedule_task)
 * [Connect To MySql DataBase](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/How_to_connect_with_mysql_database)
 * [Create Custome Templete Tags ](https://paytmbadshah.github.io/notes/python%20notes/Django%20Notes/custom_template_tags)
+
 ## Some Basic Are Here 
 
 + Date 
