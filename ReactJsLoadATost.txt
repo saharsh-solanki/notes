@@ -4,6 +4,7 @@
 
 3}  Past The Code In The App Section
 
+import 'react-toastify/dist/ReactToastify.css';
 
       import { ToastContainer, toast } from 'react-toastify';
       function App() {
