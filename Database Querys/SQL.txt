@@ -1,0 +1,76 @@
+
+DBMS -> Database management system . in this data is stored as file such as XML ,
+        Wndows registery . Relationship bwterrn two table or file are managed by
+         programatically
+
+RDBM -> Relational Database management system is the data stored as a tabular form and And We Can 
+         manage relation when creating tables . 
+
+Database Query -> 
+
+    1} CREATE DATABASE DB_NAME; 
+       to create a new database;
+
+    2} SHOW DATABASES;
+       List all the databases;
+
+    3} DESC TABLES_NAME;
+        Describe tables details;
+
+    4} SHOW TABLES;
+       List all tables in the database;
+
+    5} DROP DATABASE_NAME or TABLE_NAME; 
+    to Delete a database or table
+
+    6} CREATE TABLE User ( user_id int NOT NULL AUTO_INCREMENT ,
+     username varchar(250) , fullname varchar ( 350),
+      PRIMARY KEY(user_id)) ;
+
+      CREATE a table in db ;By default, the starting value for 
+      AUTO_INCREMENT is 1, and it will increment by 1 for each new record.
+      To let the AUTO_INCREMENT sequence start with another value, use the following
+       SQL statement:
+
+    ALTER TABLE User AUTO_INCREMENT=100;
+
+    7} INSERT INTO User ( username , fullname) values ("SAHARSHm","saharsh solanki");
+
+CLAUES -> Clauses are in-built functions available to us in SQL. With the help of clauses, 
+        we can deal with data easily stored in the table. Clauses help us filter and analyze data
+        quickly. When we have large amounts of data stored in the database, we use Clauses to
+         query and get data required by the user.
+
+SQL -> Stands for Structured Query Language is a standrized programing language 
+       that is used to manage relational databases and perform  various operation in them 
+       it is create in 1970's 
+
+JOIN -->  A Join Clause is used to combine two or more rows of diffrent tables , basesd on 
+         a related column on them 
+     
+    Example -> Suppose we have two Tables User ( Contains info of user ) and Order  ( Contain )
+               History of order by default we use INNER JOIN
+
+    Syntext = > SELECT * FROM Orders INNER JOIN Users on User.user_id  = Orders.user_id ;
+    
+    To select specific fields Orders.orderId, User.username, User.fullname, Orders.order_type
+
+    Different Types of SQL JOINs _>
+
+    1} (INNER) JOIN: Returns records that have matching values in both tables 
+         
+         In the prevoious example we have use inner join 
+
+    2} LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from 
+    the right table
+    
+    Syntext : SELECT Orders.orderId, User.username, User.fullname, Orders.order_type FROM User LEFT JOIN Orders on User.user_id  = Orders.user_
+               id ;
+
+    3} RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+    
+      Syntext :  SELECT Orders.orderId, User.username, User.fullname, Orders.order_type FROM User RIGHT JOIN Orders on User.user_id  = Orders.user_id ;
+
+    4} FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+    

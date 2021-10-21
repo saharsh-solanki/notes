@@ -1,0 +1,6 @@
+Install React Native Ubuntu
+           Follow This -> https://www.tecmint.com/install-reactjs-on-ubuntu/
+
+Got error while installing use this for permission denied issue
+              https://stackoverflow.com/questions/46058546/error-eacces-permission-denied-access-usr-lib-node-modules/49122289#49122289
+
