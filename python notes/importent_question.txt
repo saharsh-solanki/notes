@@ -34,6 +34,9 @@ Ques 1 : What Are
           8) Reduce function
           9) UML
           10) PEP8
+Ques 2 : What is memory management in python and how it work ?
+Ques 3 : What is monkey patching ?
+Ques 4 : Difference between List and Tuple ?
 
 
 Ans 1     1) Closures: -
