@@ -1,5 +1,6 @@
 Ques 1    What is object relational mapping ?
 Ques 2    What is object relation mapper in django ?
+Ques 3    What is QuerySet in django ?
 
 Ans 1     In short Object-Relational Mapping (ORM) is a technique that  interact with our database using our choice
           of object orianted language insted of using SQL .
@@ -8,10 +9,15 @@ Ans 2     One of the most powerful features of Django is its Object-Relational M
           which enables you to interact with your database, like you would with SQL. In fact, Django's
           ORM is just a pythonical way to create SQL to query and manipulate
           your database and get results in a pythonic fashion.
-          *) ORM Automatically generates database schemas from defined class . it generates and sql
+          *) ORM Automatically generates database schemas from defined class . it generates an sql
             query for a particular database which means devloper does not need to write sql query's .
             
           *) It is eassy to shift from one database to diffrent so the project become from more postable 
           
           *) ORM Use connector to connect database with a web application .
+          
+          
+          
+Ans 3     A Queryset can be defined as a list containing all objects we have created using django module .
+          Queryset allow you to read , manupulate , alter data in database .
           
