@@ -21,3 +21,165 @@ Ans 2     One of the most powerful features of Django is its Object-Relational M
 Ans 3     A Queryset can be defined as a list containing all objects we have created using django module .
           Queryset allow you to read , manupulate , alter data in database .
           
+------------------------------------BASIC PYTHON QUESTION -------------------------------------------------
+
+
+Ques 1 : What Are
+          1)  Closures        2) generator 
+          3) Accessor and Mutator
+          4) Decorator’s
+          5) *args and **kwargs
+          6)  Lambda Function
+          7) Map function
+          8) Reduce function
+          9) UML
+          10) PEP8
+
+
+Ans 1     1) Closures: -
+             Python Closures are these inner functions that are enclosed within the outer function. 
+             Closures can access variables present in the outer function scope. It can access these
+             variables even after the outer function has completed its execution.
+                Example :
+                    def outer(name):
+                      # this is the enclosing function
+                       def inner():
+                          # this is the enclosed function
+                          # the inner function accessing the outer function's variable 'name'
+                           print(name)
+                       inner()
+                    # call the enclosing function
+                    outer('TechVidvan')
+                    
+            2) Generator : 
+               Generator-Function : A generator-function is defined like a normal function, but whenever
+               it needs to generate a value, it does so with the yield keyword rather than return.
+               If the body of a def contains yield, the function automatically becomes a generator function.
+                    # A generator function that yields 1 for first time,
+                    # 2 second time and 3 third time
+                    def simpleGeneratorFun():
+                              yield 1			
+                              yield 2			
+                              yield 3			
+                    # Driver code to check above generator function
+                    for value in simpleGeneratorFun():
+                              print(value)
+                     Generator-Object : Generator functions return a generator object. Generator
+                     objects are used either by calling the next method on the generator object or using the
+                     generator object in a “for in” loop (as shown in the above program).
+                    # A Python program to demonstrate use of 
+                    # generator object with next() 
+                    # A generator function
+                    def simpleGeneratorFun():
+                        yield 1
+                        yield 2
+                        yield 3
+                    # x is a generator object
+                    x = simpleGeneratorFun() 
+                    # Iterating over the generator object using next
+                    
+                    
+          3) Accessor and Mutator : -
+                Accessor Method: This  method
+                    is used to access the state of   
+                    the  object i.e, the data hidden in the 
+                    object can  be accessed from this method. 
+                    However, this method cannot change the state 
+                    of the object, it can only access the data hidden. We can 
+                    name these methods with the word get. 
+
+                Mutator Method: This method is used to mutate/modify the state of an object
+                    i.e, it alters the hidden value of the data variable. It can set the value of 
+                    a variable instantly to a new value. This method is also called as update method.
+                    Moreover, we can name these methods with the word set. 
+                    So, here the index() and count() method only accesses the data so
+                    they are accessor methods but the append() method here modifies the array 
+                    so its a mutator method. 
+                    arr  = [2,4,5,4,3]
+                    print(arr.index(2))
+                    print(arr.append(24))
+                    print(arr)
+
+
+
+
+
+          4) Decorator’s
+                    Decorator are a very powerful and useful tool in Python since it allows
+                    programmers to modify the behaviour of function or class. Decorators allow
+                    us to wrap another function in order to extend the behaviour of the wrapped 
+                    You can store the function in a variable.You can pass the function as a parameter to another function.
+                    You can return the function from a function.You can store them in data structures such as hash tables, list
+                    
+                    In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+                    
+                    A decorator takes in a function, adds some functionality and returns it
+                    
+                    This is also called metaprogramming because a part of the program tries to modify another part of the program at compile time.
+                   
+                   Such functions that take other functions as arguments are also called higher order functions
+                  
+                  Chaining Decorators in Python
+                    def star(func):
+                        def inner(*args, **kwargs):
+                            print("*" * 30)
+                            func(*args, **kwargs)
+                            print("*" * 30)
+                        return inner
+
+
+                    def percent(func):
+                        def inner(*args, **kwargs):
+                            print("%" * 30)
+                            func(*args, **kwargs)
+                            print("%" * 30)
+                        return inner
+
+
+                    @star
+                    @percent
+                    def printer(msg):
+                        print(msg)
+
+
+                    printer("Hello")
+
+          
+        5) *args and **kwargs
+          We use the “wildcard” or “*” notation like this – *args OR **kwargs – as our
+          function’s argument when we have doubts about the number of  arguments we should pass in a function
+
+        1.)*args (Non-Keyword Arguments)
+          The special syntax *args in function definitions in python is used to pass a variable number
+          of arguments to a function. It is used to pass a non-key worded, variable-length argument list. 
+          # Python program to illustrate
+          # *args with first extra argument
+          def myFun(arg1, *argv):
+              print ("First argument :", arg1)
+              for arg in argv:
+                  print("Next argument through *argv :", arg)
+
+          myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+
+       2.)**kwargs (Keyword Arguments)
+          The special syntax **kwargs in function definitions in python is used to pass a keyworded,
+          variable-length argument list. We use the name kwargs with the double star. The reason is because 
+          the double star allows us to pass through keyword arguments (and any number of them).
+
+          def myFun(**kwargs):
+              for key, value in kwargs.items():
+                  print ("%s == %s" %(key, value))
+
+          # Driver code
+          myFun(first ='Geeks', mid ='for', last='Geeks')  
+
+
+          
+          6)  Lambda Function
+          7) Map function
+          8) Reduce function
+          9) UML
+          10) PEP8
+
+                    
+                    
