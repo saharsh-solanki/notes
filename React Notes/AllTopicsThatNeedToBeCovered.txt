@@ -1,1 +1,13 @@
-
+Ques 1. Describe All The below 
+        1) React Js  
+        2) Props 
+        3) States 
+        4) Lifecycle Methods 
+        5) Keys 
+        6) Class Component 
+        7) Function Component 
+        8) contructor 
+        
+        
+Ques 2  Diffrence between class component and function component 
+Ques 3  
