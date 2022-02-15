@@ -7,6 +7,7 @@ Ques 1. Describe All The below
         6) Class Component 
         7) Function Component 
         8) contructor 
+        9) Mount And unmount 
         
         
 Ques 2  Diffrence between class component and function component 
@@ -19,3 +20,6 @@ Ques 4  Define The Following Hooks
         5) useMemo Hook
         6) useContext Hook
         7) useReducer Hook
+        
+Quesn 5 Can i create an state with and object in useState() and how can we update a specific value 
+        Suppose we have state and keys are x,y,z and now i want to update only x so how can i do that 
