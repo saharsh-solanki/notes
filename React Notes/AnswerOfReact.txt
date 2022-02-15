@@ -56,7 +56,60 @@ Diffrent Types of Hooks
       Side effects are actions that can change our component state in an unpredictable fashion (that have caused 'side effects').
       useEffect accepts a callback function (called the 'effect' function), which will by default run every time the component re-renders
       
+      useEffect lets us conditionally perform effects with the dependencies array.
+      
+   Run Again when a Value Changes
+        useEffect lets us conditionally perform effects with the dependencies array.
+        The dependencies array is the second argument passed to useEffect.
+        If any one of the values in the array changes, the effect function runs again.
+        If no values are included in the dependencies array, useEffect will only run on component mount and unmount.
+   Fetch Data from an API 
+    ``useEffect is the hook to use when you want to make an HTTP request (namely, a GET request when the component mounts).
+        Note that handling promises with the more concise async/await syntax requires creating a separate function.
+        This is because the effect callback function cannot be async.
+
     
+    
+3) . useRef Hook  ----> 
+    useRef to Reference React Elements
+    Refs are a special attribute that are available on all React components.
+    They allow us to create a reference to a given element / component when the component mounts.
+    useRef allows us to easily use React refs. They are helpful (as in the example below) 
+    when we want to directly interact with an element, such as to clear its value or focus it, as with an input.
+    We call useRef (at the top of a component) and attach the returned value to the element's ref attribute to refer to it.
+
+
+4. useCallback Hook
+    useCallback Prevents Callbacks from Being Recreated
+    
+    
+5. useContext ------>
+      The useContext hook is a great hook to use when you need to send props down through multiple, nested child components.
+      Instead of passing it through every single component on the way down, you can define
+      it in the parent component. Then, bring it into the nested component where you need it
+      , while bypassing the middle components you’d normally have to send it through.
+      
+      Suppose You Have An app componet and you want to  pass a value to 5th child 
+      app -> header -> profile -> user -> detials -> show 
+      
+      Now you gona do is pass using props but it is difficult to handle that situation 
+      
+      Create a context
+            To start using useContext, you must first create a context.
+            So, in our App (parent) component, we’ll import createContext from React. Then, create a user context. 
+            
+            With that UserContext in place, we can wrap a provider around components, then consume the property in any child component.
+            
+            Note that now, we’re not sending the user property into Profile. 
+            We’re sending it into the UserContext Provider via value={user}. 
+            We can then grab that value in any of the nested components.
+      Consume the 
+      
+      Now import useContext and Context that we have create like UserContext 
+      and then const user = useContext(userContext); 
+      
+      
+        belog - https://medium.com/geekculture/react-hooks-usecontext-e8c468bce91a
 
 
         
