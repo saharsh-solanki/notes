@@ -1,3 +1,10 @@
+Mount and unMount -- > 
+    The main job of React is to figure out how to modify the DOM to match what the components want to be rendered on the screen.
+    React does so by "mounting" (adding nodes to the DOM), "unmounting" (removing them from the DOM),
+    and "updating" (making changes to nodes already in the DOM).
+    
+    
+---------------------------------------------------------------------------------------------------------------------------------
 Hooks ----> 
   Hooks are the new feature introduced in the React 16.8 version. It allows you to
   use state and other React features without writing a class. Hooks are the functions
@@ -6,6 +13,50 @@ Hooks ---->
                             Hooks are backward-compatible, which means it does not 
  contain any breaking changes. Also, it does not replace your knowledge of React concepts.
  
+---------------------------------------------------------------------------------------------------------------------------------
+
+Rules Of Hooks -> 
+   Hooks are similar to JavaScript functions, but you need to follow these two rules when using them.
+   Hooks rule ensures that all the stateful logic in a component    is visible in its source code. These rules are:
+     1. Only call Hooks at the top level
+        Do not call Hooks inside loops, conditions, or nested functions.
+        Hooks should always be used at the top level of the React functions. 
+        This rule ensures that Hooks are called in the same order each time a components renders.
+        
+      2. Only call Hooks from React functions
+        You cannot call Hooks from regular JavaScript functions. 
+        Instead, you can call Hooks from React function components. 
+        Hooks can also be called from custom Hooks.
+        
+-----------------------------------------------------------------------------------------------------------------------------
+    
+Diffrent Types of Hooks 
+
  1) useState() --> 
-        useState to Create State Variables
+    useState to Create State Variables
         The useState hook allows us to create state variables in a React function component.
+        State allows us to access and update certain values in our components over time
+        When we create a state variable, we must provide it a default value (which can be any data type).
+        We get that state variable as the first value in an array, which we can destructure and declare with const.
+    Update State Variables
+        useState also gives us a setter function to update the state after it is created.
+        To update our state variable, we pass the setter function the new value we want our state to be.
+        When you declare your setter function, in most cases you will prefix it with the word "set"
+    Can Be Used Once Or Many Times  - > Yes 
+    pdate State based on Previous Value  -> Yes
+    Manage State with an Object ->  yes 
+        const [ year , setYear ]  = useState({test:1})
+        setYear({x:1})
+        so testWill Gona Removed so we have to do setYear({...state,x:23})
+        
+        
+2) useEffect Hook ---------->
+      useEffect Hook Let you use side effect inside a function component 
+      Side effects are when we need to reach into the outside world. Such as fetching data from an API or working with the DOM.
+      Side effects are actions that can change our component state in an unpredictable fashion (that have caused 'side effects').
+      useEffect accepts a callback function (called the 'effect' function), which will by default run every time the component re-renders
+      
+    
+
+
+        
