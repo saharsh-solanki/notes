@@ -23,3 +23,6 @@ Ques 4  Define The Following Hooks
         
 Quesn 5 Can i create an state with and object in useState() and how can we update a specific value 
         Suppose we have state and keys are x,y,z and now i want to update only x so how can i do that 
+
+
+Ques 6 Define rules of Hooks  
