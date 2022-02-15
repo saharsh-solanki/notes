@@ -11,4 +11,11 @@ Ques 1. Describe All The below
         
 Ques 2  Diffrence between class component and function component 
 Ques 3  what is hooks in react Define All diffrent types of Hooks 
-Ques 4
+Ques 4  Define The Following Hooks 
+        1) useState Hook
+        2) useEffect Hook
+        3) useRef Hook
+        4) useCallback Hook
+        5) useMemo Hook
+        6) useContext Hook
+        7) useReducer Hook
