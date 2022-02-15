@@ -82,8 +82,8 @@ Diffrent Types of Hooks
 4. useCallback Hook
     useCallback Prevents Callbacks from Being Recreated
     
-    
-5. useContext ------>
+5. useMemo Hook
+6. useContext ------>
       The useContext hook is a great hook to use when you need to send props down through multiple, nested child components.
       Instead of passing it through every single component on the way down, you can define
       it in the parent component. Then, bring it into the nested component where you need it
@@ -110,6 +110,10 @@ Diffrent Types of Hooks
       
       
         belog - https://medium.com/geekculture/react-hooks-usecontext-e8c468bce91a
+        
+        
+        
+7 ) useReducer -> 
 
 
         
