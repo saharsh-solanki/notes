@@ -10,4 +10,5 @@ Ques 1. Describe All The below
         
         
 Ques 2  Diffrence between class component and function component 
-Ques 3  
+Ques 3  what is hooks in react Define All diffrent types of Hooks 
+Ques 4
