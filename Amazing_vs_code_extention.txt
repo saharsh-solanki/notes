@@ -1,0 +1,7 @@
+For React Js --> 
+    1) riazxrazor -> HTML to JSx -> Converts html code to React JSX
+    2) Auto Import -> Automatic import react -> Auto Import -> ext install steoates.autoimport
+    3) breacket pair coloriz -> Coloriz the bracket -> ext install CoenraadS.bracket-pair-colorizer
+    4) Import Cost -> Display The Size of Imported const -> ext install wix.vscode-import-cost
+    5) Prettier - Code formatter ->  ext install esbenp.prettier-vscode
+    6) Turbo Console Log -> ext install ChakrounAnas.turbo-console-log
