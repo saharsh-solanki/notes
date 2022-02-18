@@ -1,4 +1,7 @@
 
+Use this Command to store the username and pasword so no need to enter again and again 
+git config credential.helper store
+
 Download heroku cli & Download git --> ( Both Are App Search On Google )
 
 Create A Heroku Account --> https://dashboard.heroku.com/apps  
