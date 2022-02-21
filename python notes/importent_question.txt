@@ -1,6 +1,11 @@
 Ques 1    What is object relational mapping ?
 Ques 2    What is object relation mapper in django ?
 Ques 3    What is QuerySet in django ?
+Ques 4    What is a serializer ? 
+Ques 5    APIView ( Function Based And class based View ) , Using Mixins  , Using generic class-based views
+
+-----------------------------------------------------------------------------------------------------------
+
 
 Ans 1     In short Object-Relational Mapping (ORM) is a technique that  interact with our database using our choice
           of object orianted language insted of using SQL .
