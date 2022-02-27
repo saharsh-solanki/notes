@@ -26,3 +26,5 @@ Quesn 5 Can i create an state with and object in useState() and how can we updat
 
 
 Ques 6 Define rules of Hooks  
+
+Ques 7 React Redux 
