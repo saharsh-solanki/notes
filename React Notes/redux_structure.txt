@@ -1,0 +1,127 @@
+Create a folder called reducer 
+create --->   1) action
+              2) reducer
+              3) store 
+             
+              
+each folder contains the index is root 
+
+
+1) action   -> index.js 
+            -> user/action.js 
+            ........
+     example -> user/action.js 
+     create all the action in action.js file like 
+     export const INC = "INCREMENT"
+
+     
+     
+     example index.js   -> 
+     import all the actions
+     export const rootAction = {
+        counter: { INCREMENT: INCREMENT },
+      };
+      
+      and create your root action like this 
+     
+     
+            
+2) reducer   -> index.js
+             -> user/userReducer  --> 
+             -> ..............
+             
+         example   user/userReducer 
+         create you reducers like 
+         const initialState = {
+          CounterNumber: 0,
+        };
+
+        export function ReducerCustom(state = initialState, action) {
+          switch (action.type) {
+            case INCREMENT:
+              return { ...state, CounterNumber: state.CounterNumber + 1 };
+            default:
+              return state;
+          }
+        }
+        
+        export function ReducerCustomTwo(state = { count: 1, data: {} }, action) {
+          switch (action.type) {
+            case "INCREMENTBYCUSTOM":
+              console.log(action);
+              return {
+                ...state,
+                count: action.payload.no,
+                data: action.payload,
+              };
+            default:
+              return state;
+          }
+        }
+
+         
+         example   index.js 
+         now in the main import all the reducers 
+         use this combin all your reducers 
+           const rootReducer = combineReducers({
+                ReducerCustom,
+                ReducerCustomTwo,
+              });
+         
+         
+             
+3) store      -> index.js
+              
+              
+           example store.js 
+           // import all the reducers 
+           import { applyMiddleware, combineReducers, createStore } from "redux";
+           const rootReducer = combineReducers({
+                ReducerCustom,
+                ReducerCustomTwo,
+              });
+            const store = createStore(
+            rootReducer,  
+            //applyMiddleware(thunk)
+            //   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+          );
+              
+              
+After Doing all the things we have 
+inside main file like app.js 
+import { Provider } from "react-redux";
+
+<Provider store={store}>
+
+  // rest of the goes here 
+
+</Provider>
+
+
+
+
+
+
+Now to get the state we are going to use 
+const count = useSelector((state) => state.ReducerCustomTwo.count);
+
+now to change the state 
+const dispatch = useDispatch();
+
+
+
+Passing with values 
+
+without value 
+
+ onClick={() => dispatch({ type: rootAction.counter.INCREMENT })}
+
+
+<button
+            onClick={() =>
+              dispatch({
+                type: "INCREMENTBYCUSTOM",
+                payload: { no: 145 },
+              })
+            }
+          >
