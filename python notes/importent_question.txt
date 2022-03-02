@@ -3,6 +3,10 @@ Ques 2    What is object relation mapper in django ?
 Ques 3    What is QuerySet in django ?
 Ques 4    What is a serializer ? 
 Ques 5    APIView ( Function Based And class based View ) , Using Mixins  , Using generic class-based views
+Ques 6    what are django signals ?
+Ques 7    what are django channel ? 
+Ques 8    what are celery in django ? 
+Ques 9    waht ar
 
 -----------------------------------------------------------------------------------------------------------
 
