@@ -48,7 +48,7 @@ Ques 3 : What is monkey patching ?
 Ques 4 : Difference between List and Tuple ?
 Ques 5 : what does copy function do . What is deep copy and shallow copy means 
 Ques 6 : when i do list.copy then whick copy method apply 
-         
+Ques 7 : memory allocation of list 
 
 Ans 1     1) Closures: -
              Python Closures are these inner functions that are enclosed within the outer function. 
