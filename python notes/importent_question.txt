@@ -46,7 +46,9 @@ Ques 1 : What Are
 Ques 2 : What is memory management in python and how it work ?
 Ques 3 : What is monkey patching ?
 Ques 4 : Difference between List and Tuple ?
-
+Ques 5 : what does copy function do . What is deep copy and shallow copy means 
+Ques 6 : when i do list.copy then whick copy method apply 
+         
 
 Ans 1     1) Closures: -
              Python Closures are these inner functions that are enclosed within the outer function. 
@@ -191,7 +193,16 @@ Ans 1     1) Closures: -
           7) Map function
           8) Reduce function
           9) UML
-          10) PEP8
+          10) PEP
 
-                    
+   Ans  copy :- copy the obj as it is  there two concept 
+                Deep copy and shallow copy
+          Deep copy :- whenever you use deep copy in your
+                    object it use recursion method to copy that object
+
+         Shallow copy is is like ok you have done object and inside the memory
+         it has a difference so that tree French is going to be given to that new variable
+         so both the variable contains the same reference so so if you update anything in
+         any of the the object then it will reflect to you both the variables or all of 
+           the copies because it contains the the reference
                     
