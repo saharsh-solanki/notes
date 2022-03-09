@@ -208,3 +208,5 @@ Ans 1     1) Closures: -
          any of the the object then it will reflect to you both the variables or all of 
            the copies because it contains the the reference
                     
+   Ans wsgi file --> and Asgi  
+          https://medium.com/analytics-vidhya/difference-between-wsgi-and-asgi-807158ed1d4c
