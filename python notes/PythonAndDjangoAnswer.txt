@@ -184,6 +184,14 @@ Ans 11: __name__ return the name of file is run .
         Advantage : Suppose You Have 1.py with show function and after the function you have write some print statement .
                     if you import the show in 2.py and run the 2.py file the show function will run and that some print 
                     statement is also gona run so we can you __name__ like if __name__ == "main": Then run the print 
+                    
+                    
+Ans 12: Iterable : - is an python object with an __iter__() method or with a __getitem__() method
+        that implements Sequence semantics. Which gives you the Iterator .
+        
+        Iterator : - Iterator is an type of object which has __next__ method so we can jump to next Method .
+        
+        Interation : - Iterating the element and fetching the next element is knowns as Iteration . 
         
                 
 
