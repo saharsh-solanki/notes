@@ -193,6 +193,26 @@ Ans 12: Iterable : - is an python object with an __iter__() method or with a __g
         
         Interation : - Iterating the element and fetching the next element is knowns as Iteration . 
         
+        
+        
+        
+Ans 13 : a)_ List compreension : 
+             Exmaple : 
+             [item for item in range(0,1000) if item%3 == 0]
+         
+         b)  Dictonary Comprehension : 
+         
+             print({item:test_dict[item] for item in test_dict.keys() if test_dict[item] > 100 
+         
+         c) set_comprehension : 
+                { item for item in range (0,223) }
+                
+         d) generator Comprehesion : 
+         
+                ( i for i in range(0,1111) )
+                
+          Note we don't have tuple Comprehesion .
+        
                 
 
 -----------------------------------------Advance Question Anwser ----------------------------------------
