@@ -1,12 +1,4 @@
-Ques 1    What is object relational mapping ?
-Ques 2    What is object relation mapper in django ?
-Ques 3    What is QuerySet in django ?
-Ques 4    What is a serializer ? 
-Ques 5    APIView ( Function Based And class based View ) , Using Mixins  , Using generic class-based views
-Ques 6    what are django signals ?
-Ques 7    what are django channel ? 
-Ques 8    what are celery in django ? 
-Ques 9    waht ar
+
 
 ------------------------------------BASIC PYTHON QUESTION -------------------------------------------------
 
@@ -33,3 +25,14 @@ Ques 10: try, except , finally , else ?
 Ques 11: Why We Use  __name__ what does it return ? Advantage ? Example ?
 Ques 12:
 
+------------------------------------Advance PYTHON Django QUESTION -------------------------------------------------
+
+Ques 1    What is object relational mapping ?
+Ques 2    What is object relation mapper in django ?
+Ques 3    What is QuerySet in django ?
+Ques 4    What is a serializer ? 
+Ques 5    APIView ( Function Based And class based View ) , Using Mixins  , Using generic class-based views
+Ques 6    what are django signals ?
+Ques 7    what are django channel ? 
+Ques 8    what are celery in django ? 
+Ques 9    waht ar
