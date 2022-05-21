@@ -177,6 +177,15 @@ Ans 10 :    try:
                 # This Block will Always Run 
                 
                 
+Ans 11: __name__ return the name of file is run .
+        senario.1)  Means if you hae write __name__ in 1.py file and if you run that 1.py file it will return main
+        senario.2) if you have 1.py and 2.py and if you import 1.py in 2.py it will 2 menas the name of file 
+        
+        Advantage : Suppose You Have 1.py with show function and after the function you have write some print statement .
+                    if you import the show in 2.py and run the 2.py file the show function will run and that some print 
+                    statement is also gona run so we can you __name__ like if __name__ == "main": Then run the print 
+        
+                
 
 -----------------------------------------Advance Question Anwser ----------------------------------------
 Ans 1     In short Object-Relational Mapping (ORM) is a technique that  interact with our database using our choice
