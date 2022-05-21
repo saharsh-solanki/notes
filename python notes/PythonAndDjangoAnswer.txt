@@ -159,6 +159,25 @@ Ans 1     1) Closures: -
           https://medium.com/analytics-vidhya/difference-between-wsgi-and-asgi-807158ed1d4c
 
 
+Ans 9 : Type *args is tuple becase its is immutable and
+        type of **kwargs is dict because it is an key value pair 
+        
+        
+Ans 10 :    try: 
+                # This Will Run First 
+                
+            except Exception as e : 
+                # this will run if Try Block Has Error 
+                
+            else : 
+                # this will if the try block is execute and there is not exception in try block 
+                # Or When The except block is not run 
+                
+            Finally :
+                # This Block will Always Run 
+                
+                
+
 -----------------------------------------Advance Question Anwser ----------------------------------------
 Ans 1     In short Object-Relational Mapping (ORM) is a technique that  interact with our database using our choice
           of object orianted language insted of using SQL .
