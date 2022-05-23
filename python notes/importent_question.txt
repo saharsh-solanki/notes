@@ -24,6 +24,8 @@ Ques 9 : What is the typeof *args and **kwargs ?
 Ques 10: try, except , finally , else ?
 Ques 11: Why We Use  __name__ what does it return ? Advantage ? Example ?
 Ques 12: What is Iterable, Iterator , Interation?
+Ques 13: what is list compreension ,  Dictionary compreension , Set compreension, gen compreension ? 
+
 
 ------------------------------------Advance PYTHON Django QUESTION -------------------------------------------------
 
