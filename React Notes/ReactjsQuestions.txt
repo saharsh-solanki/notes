@@ -1,2 +1,3 @@
 Adavance Questions 
 Ques 1 What is pure component in react js . How  to create that in Function Component and Class Component ?
+Ques 2 How to achive unmounting in class component and function component ?
