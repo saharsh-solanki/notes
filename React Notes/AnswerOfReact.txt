@@ -119,17 +119,62 @@ https://www.freecodecamp.org/news/react-hooks-cheatsheet/
         
 ------------------------------------------------------------------------------------------------------------------
 
+Pure Component - > 
+    React.PureComponent is similar to React.Component. The difference between them is 
+    that React.Component doesn’t implement shouldComponentUpdate(), but React.PureComponent
+    implements it with a shallow prop and state comparison.
+
+    If your React component’s render() function renders the same result
+    given the same props and state, you can use React.PureComponent for a
+    performance boost in some cases.
+
+    React.PureComponent’s shouldComponentUpdate() only shallowly compares the objects
+    . If these contain complex data structures, it may produce false-negatives for deeper differences.
+    Only extend PureComponent when you expect to have simple props and state, or use forceUpdate() 
+    when you know deep data structures have changed. Or, consider using immutable objects
+    to facilitate fast comparisons of nested data.
+
+    Furthermore, React.PureComponent’s shouldComponentUpdate() skips prop updates
+    for the whole component subtree. Make sure all the children components are also “pure”.
 
 
+In Class Component it is simple  class .. extends react.pureComponent 
+
+Achiing Pure Component in react Functional Component 
+
+    React.memo ->  As of React 16.6.0, memo has been added, so the answer is now:
+    const C = React.memo(props => {
+      return <var>{props.n}</var>
+    })
+
+    React.memo only checks for prop changes. If your function 
+    component wrapped in React.memo has a useState, useReducer or 
+    useContext Hook in its implementation, it will still rerender when state or context change.
 
 
+-----------------------------------------------------------------------------------------------------------------
+Achiveing Unmouting in class component ---> 
+
+    componentWillUnmount() is invoked immediately before a component 
+    is unmounted and destroyed. Perform any necessary cleanup in this method, 
+    such as invalidating timers, canceling network requests, or cleaning up 
+    any subscriptions that were created in componentDidMount().
+
+    You should not call setState() in componentWillUnmount() because the component
+    will never be re-rendered. Once a component instance is unmounted, it will never 
+    be mounted again.
 
 
-
-
-
-
-
+    If you add a return function inside the useEffect function,
+    it is triggered when a component unmounts from the DOM. This looks like:
+    import React, { useEffect } from 'react';
+    const ComponentExample => () => {
+        useEffect(() => {
+            return () => {
+                // Anything in here is fired on component unmount.
+            }
+        }, [])
+    }
 
 
 
