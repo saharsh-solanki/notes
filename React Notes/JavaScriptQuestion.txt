@@ -1,0 +1,65 @@
+Ques 1  What Is Java Script ?
+Ques 2  Define Let , var , Const ?
+Ques 3 Define DataType and Type Of DataTypes ?
+Ques 4 Define Operater And Its Types ?
+Ques 5 Define Loops In Js and all the that we can use to iterate ?
+Ques 6 Define Hoisting in java Script ?
+Ques 7 Define variable Scoping ?
+Ques 8 Diffrence Between Premitive and non Premative DataTypes ?
+Ques 9 Defiine java Script Object .
+Ques 10 Define java script method and this keyword ?
+Ques 11 Define Contructor Function ?
+Ques 12 Define Object Literal and Diffrence between Constructor function and object literal ?
+Ques 13 Define geter and seter ?
+Ques 14 What is Object.defineprope?
+Ques 15 Define Prototype ?
+Ques 16 Define Array and its accessing methods ?
+Ques 17 What Is NAN and Why Nan Return Number When we Print its type ?
+Ques 18 Define All The condition when its can return NAN ?
+Ques 19 What is try , Catch and Fianlly . And Why we use it ?
+Ques 20 what is java script module ?
+Ques 21 What is ECMA 6 or ES6 ?
+Ques 22 Define Spread Operator .
+Ques 23 Tell about 10 things that introduced in ES6 that is New ?
+Ques 24 What is deep copy and Shallow Copy in Java Script ?
+Ques 25 what is Falsy value ?
+Ques 26 What is type Convertion and type casting in js ?
+Ques 27 What is DOM ? 
+Ques 28 What is API ?
+Ques 29 What is client side scripting and server side scripting ?
+Ques 30 what Diffrence bewteen == and === ?
+Ques 31 diffrence between null and undefined ?
+Ques 32 How Get Current URL of WebSide or Cureent Path ?
+Ques 33 Define 10 method of document ?
+Ques 34 How to check if a value return NAN ?
+Ques 35 Why we create contructor function ?
+Ques 36 Java Script History ?
+Ques 37 How Broweser Support Java Script ?
+Ques 38 how to  create Classes in Java script ?
+Ques 39 how to INHERITE on class to another class 
+Ques 40 How to copy one object to another object ?
+Ques 41 what is array Destructring ?
+Ques 42 what is object Destructuring ?
+Ques 43 name of the compiler that java script use ? 
+Ques 44 what is babel ?
+Ques 45 All opps Concept ?
+Ques 46 What does broweser provide for security ?
+Ques 47 what is method overloading in js ?
+Ques 48 what is Operator Overloading ?
+Ques 49 what is function overlaoding ?
+Ques 50 Js Import and Export ? 
+Ques 51 java scirpt XMLHttpRequest Obejct ? 
+Ques 52 fetch method to Call Api . how to use it ?
+Ques 53 What is promise in Java Scirpt . how to create ? 
+Ques 54 FS Library in Java Scirpt ? 
+Ques 55 Date time Object and its using .
+Ques 56 Ajax uses ? 
+Ques 57 Async And Await in js and why we use it , why we need it , When to use it ?
+Ques 58 What is Event in java script . Define 15 event of java scirpt ?
+Ques 59 How to Does Java Scirpt Work?
+Ques 60 How to accept cookie and change cookie ?
+Ques 61 what is local storage , how to use , why , need .
+Ques 62 How does memory manage in java script.
+Ques 63 Using Json Object Parse and stringyfy ?
+Ques 64 Converting image to base64 ?
+Ques 65 changing style of any element in DOM using js ?
