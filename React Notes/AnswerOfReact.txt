@@ -179,6 +179,20 @@ Achiveing Unmouting in class component --->
         }, [])
     }
 
+-----------------------------------------------------------------------------------------------------------------
+
+React.lazzy or Lazzy in react --> 
+
+In Simple Its wait for the component and once the component is fully 
+loaded it will render but until that we can use or do some other 
+stuffs like show the message of laodding ... like this 
 
 
+import React, { Suspense, lazy } from 'React';
 
+const Deferred = lazy(() => import("./Deferred"));
+
+
+<Suspense fallback={<div>Fallback Component</div>}>
+  <Deferred {...props} />
+</Suspense>
