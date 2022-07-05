@@ -1,4 +1,5 @@
 Adavance Questions 
 Ques 1 What is pure component in react js . How  to create that in Function Component and Class Component ?
 Ques 2 How to achive unmounting in class component and function component ?
+Ques 3 What is Lazzy And react.lazzy in react ? 
 https://www.freecodecamp.org/news/8-simple-steps-to-start-testing-react-apps-using-react-testing-library-and-jest/
