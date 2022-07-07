@@ -181,7 +181,7 @@ Achiveing Unmouting in class component --->
 
 -----------------------------------------------------------------------------------------------------------------
 
-React.lazzy or Lazzy in react --> 
+React.lazzy or Lazzy in react --> code spliting means the lazzy this process is known  us code spliting 
 
 In Simple Its wait for the component and once the component is fully 
 loaded it will render but until that we can use or do some other 
@@ -196,3 +196,33 @@ const Deferred = lazy(() => import("./Deferred"));
 <Suspense fallback={<div>Fallback Component</div>}>
   <Deferred {...props} />
 </Suspense>
+
+-----------------------------------------------------------------------------------------------------------------
+
+Fragment in react --> 
+
+Fragments let you group a list of children without adding extra nodes to the DOM.
+There are two way to use fragment in react 
+1) <React.Fragment>
+
+2) <></>
+
+-------------------------------------------------------------------------------------------------------------------
+React.createElement do --> 
+
+We recommend using JSX to describe what your UI should look like.
+Each JSX element is just syntactic sugar for calling React.createElement().
+You will not typically invoke the following methods directly if you are using JSX.
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+React.memo is a higher order component.
+
+If your component renders the same result given the same props,
+you can wrap it in a call to React.memo for a performance boost
+in some cases by memoizing the result. This means that React will 
+skip rendering the component, and reuse the last rendered result.
+
+React.memo only checks for prop changes. If your function component wrapped in
+
