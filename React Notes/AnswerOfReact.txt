@@ -226,3 +226,34 @@ skip rendering the component, and reuse the last rendered result.
 
 React.memo only checks for prop changes. If your function component wrapped in
 
+-------------------------------------------------------------------------------------------------------------------------
+
+ Referencing -> 
+
+Refs provide a way to access DOM nodes or React elements created in the render method.
+
+usage const myRef = React.createRef();
+
+render() {
+    return <div ref={this.myRef} />;
+)
+
+Accessing Refs
+When a ref is passed to an element in render, a reference to the node becomes accessible at the current attribute of the ref.
+
+const node = this.myRef.current;
+
+
+
+forward referencing 
+
+Ref forwarding is a technique for automatically passing a ref through a component 
+to one of its children. This is typically not necessary for most components in the 
+application. However, it can be useful for some kinds of components, especially in 
+reusable component libraries. The most common scenarios are described below.
+
+---------------------------------------------------------------------------------------------------
+
+High Order Component --> 
+     a higher-order component is a function that takes a component and returns a new component.
+
